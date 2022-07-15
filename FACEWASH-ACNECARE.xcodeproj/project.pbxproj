@@ -22,9 +22,12 @@
 		9B470EB5288116C100E48FD8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* SettingView.swift */; };
 		9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB6288116DF00E48FD8 /* AVService.swift */; };
 		9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB8288116FF00E48FD8 /* NotificationManager.swift */; };
-		9B470EBB2881171200E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470EBA2881171200E48FD8 /* siri.mp3 */; };
 		9B470EBF288118C300E48FD8 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EBE288118C300E48FD8 /* LocationModel.swift */; };
 		9B470EC32881192100E48FD8 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EC22881192100E48FD8 /* TimerModel.swift */; };
+		9B470ECD28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
+		9B470ECE28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
+		9B470ECF28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
+		9B470ED528811E0E00E48FD8 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +91,10 @@
 		9B470EB4288116C100E48FD8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		9B470EB6288116DF00E48FD8 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
 		9B470EB8288116FF00E48FD8 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		9B470EBA2881171200E48FD8 /* siri.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = siri.mp3; path = ../../../../Downloads/siri.mp3; sourceTree = "<group>"; };
 		9B470EBE288118C300E48FD8 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		9B470EC22881192100E48FD8 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		9B470ECC28811DC000E48FD8 /* siri.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siri.mp3; sourceTree = "<group>"; };
+		9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		9B470EAE2881165F00E48FD8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -190,7 +195,7 @@
 		9B470EAF2881166A00E48FD8 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				9B470EBA2881171200E48FD8 /* siri.mp3 */,
+				9B470ECC28811DC000E48FD8 /* siri.mp3 */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B470ECD28811DC000E48FD8 /* siri.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */,
+				9B470ECE28811DC000E48FD8 /* siri.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +319,7 @@
 			files = (
 				9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */,
 				9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */,
-				9B470EBB2881171200E48FD8 /* siri.mp3 in Resources */,
+				9B470ECF28811DC000E48FD8 /* siri.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +337,7 @@
 				9B470E912881157D00E48FD8 /* ContentView.swift in Sources */,
 				9B470EB12881168C00E48FD8 /* SoundView.swift in Sources */,
 				9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */,
+				9B470ED528811E0E00E48FD8 /* SoundViewModel.swift in Sources */,
 				9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */,
 				9B470EB5288116C100E48FD8 /* SettingView.swift in Sources */,
 				9B470EC32881192100E48FD8 /* TimerModel.swift in Sources */,

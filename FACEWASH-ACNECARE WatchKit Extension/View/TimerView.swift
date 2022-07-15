@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerView: View {
     var body: some View {
         Text("Added gitignore")
+        Text("Added siri and gitignore")
     }
 }
 
