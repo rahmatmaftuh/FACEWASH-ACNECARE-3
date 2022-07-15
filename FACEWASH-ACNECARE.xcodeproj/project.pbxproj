@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B470E7F2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E832881157C00E48FD8 /* Assets.xcassets */; };
+		9B470E8A2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B470E8F2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */; };
+		9B470E912881157D00E48FD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E902881157D00E48FD8 /* ContentView.swift */; };
+		9B470E932881157D00E48FD8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E922881157D00E48FD8 /* NotificationController.swift */; };
+		9B470E952881157D00E48FD8 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E942881157D00E48FD8 /* NotificationView.swift */; };
+		9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E962881157D00E48FD8 /* ComplicationController.swift */; };
+		9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E982881157E00E48FD8 /* Assets.xcassets */; };
+		9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B470E802881157B00E48FD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B470E742881157B00E48FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B470E7D2881157B00E48FD8;
+			remoteInfo = "FACEWASH-ACNECARE WatchKit App";
+		};
+		9B470E8B2881157D00E48FD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B470E742881157B00E48FD8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B470E882881157D00E48FD8;
+			remoteInfo = "FACEWASH-ACNECARE WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B470EA42881157E00E48FD8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9B470E8A2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B470EA82881157E00E48FD8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9B470E7F2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B470E7A2881157B00E48FD8 /* FACEWASH-ACNECARE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACEWASH-ACNECARE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACEWASH-ACNECARE WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B470E832881157C00E48FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FACEWASH-ACNECARE WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FACEWASH_ACNECAREApp.swift; sourceTree = "<group>"; };
+		9B470E902881157D00E48FD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9B470E922881157D00E48FD8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		9B470E942881157D00E48FD8 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		9B470E962881157D00E48FD8 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		9B470E982881157E00E48FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9B470E9D2881157E00E48FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B470E9E2881157E00E48FD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B470E862881157D00E48FD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B470E732881157B00E48FD8 = {
+			isa = PBXGroup;
+			children = (
+				9B470E822881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App */,
+				9B470E8D2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */,
+				9B470E7B2881157B00E48FD8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B470E7B2881157B00E48FD8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B470E7A2881157B00E48FD8 /* FACEWASH-ACNECARE.app */,
+				9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */,
+				9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B470E822881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				9B470E832881157C00E48FD8 /* Assets.xcassets */,
+			);
+			path = "FACEWASH-ACNECARE WatchKit App";
+			sourceTree = "<group>";
+		};
+		9B470E8D2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */,
+				9B470E902881157D00E48FD8 /* ContentView.swift */,
+				9B470E922881157D00E48FD8 /* NotificationController.swift */,
+				9B470E942881157D00E48FD8 /* NotificationView.swift */,
+				9B470E962881157D00E48FD8 /* ComplicationController.swift */,
+				9B470E982881157E00E48FD8 /* Assets.xcassets */,
+				9B470E9D2881157E00E48FD8 /* Info.plist */,
+				9B470E9E2881157E00E48FD8 /* PushNotificationPayload.apns */,
+				9B470E9A2881157E00E48FD8 /* Preview Content */,
+			);
+			path = "FACEWASH-ACNECARE WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		9B470E9A2881157E00E48FD8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B470E792881157B00E48FD8 /* FACEWASH-ACNECARE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B470EA92881157E00E48FD8 /* Build configuration list for PBXNativeTarget "FACEWASH-ACNECARE" */;
+			buildPhases = (
+				9B470E782881157B00E48FD8 /* Resources */,
+				9B470EA82881157E00E48FD8 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B470E812881157B00E48FD8 /* PBXTargetDependency */,
+			);
+			name = "FACEWASH-ACNECARE";
+			productName = "FACEWASH-ACNECARE";
+			productReference = 9B470E7A2881157B00E48FD8 /* FACEWASH-ACNECARE.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		9B470E7D2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B470EA52881157E00E48FD8 /* Build configuration list for PBXNativeTarget "FACEWASH-ACNECARE WatchKit App" */;
+			buildPhases = (
+				9B470E7C2881157B00E48FD8 /* Resources */,
+				9B470EA42881157E00E48FD8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B470E8C2881157D00E48FD8 /* PBXTargetDependency */,
+			);
+			name = "FACEWASH-ACNECARE WatchKit App";
+			productName = "FACEWASH-ACNECARE WatchKit App";
+			productReference = 9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9B470E882881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B470EA12881157E00E48FD8 /* Build configuration list for PBXNativeTarget "FACEWASH-ACNECARE WatchKit Extension" */;
+			buildPhases = (
+				9B470E852881157D00E48FD8 /* Sources */,
+				9B470E862881157D00E48FD8 /* Frameworks */,
+				9B470E872881157D00E48FD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FACEWASH-ACNECARE WatchKit Extension";
+			productName = "FACEWASH-ACNECARE WatchKit Extension";
+			productReference = 9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B470E742881157B00E48FD8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					9B470E792881157B00E48FD8 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					9B470E7D2881157B00E48FD8 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					9B470E882881157D00E48FD8 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 9B470E772881157B00E48FD8 /* Build configuration list for PBXProject "FACEWASH-ACNECARE" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B470E732881157B00E48FD8;
+			productRefGroup = 9B470E7B2881157B00E48FD8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B470E792881157B00E48FD8 /* FACEWASH-ACNECARE */,
+				9B470E7D2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App */,
+				9B470E882881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B470E782881157B00E48FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B470E7C2881157B00E48FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B470E872881157D00E48FD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */,
+				9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B470E852881157D00E48FD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B470E932881157D00E48FD8 /* NotificationController.swift in Sources */,
+				9B470E912881157D00E48FD8 /* ContentView.swift in Sources */,
+				9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */,
+				9B470E8F2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift in Sources */,
+				9B470E952881157D00E48FD8 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B470E812881157B00E48FD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B470E7D2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App */;
+			targetProxy = 9B470E802881157B00E48FD8 /* PBXContainerItemProxy */;
+		};
+		9B470E8C2881157D00E48FD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B470E882881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */;
+			targetProxy = 9B470E8B2881157D00E48FD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9B470E9F2881157E00E48FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B470EA02881157E00E48FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B470EA22881157E00E48FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FACEWASH-ACNECARE WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FACEWASH-ACNECARE WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FACEWASH-ACNECARE WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		9B470EA32881157E00E48FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FACEWASH-ACNECARE WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FACEWASH-ACNECARE WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FACEWASH-ACNECARE WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		9B470EA62881157E00E48FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = FACEWASH_ACNECARE_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "FACEWASH-ACNECARE WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		9B470EA72881157E00E48FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = FACEWASH_ACNECARE_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "FACEWASH-ACNECARE WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
+		9B470EAA2881157E00E48FD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9B470EAB2881157E00E48FD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B470E772881157B00E48FD8 /* Build configuration list for PBXProject "FACEWASH-ACNECARE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B470E9F2881157E00E48FD8 /* Debug */,
+				9B470EA02881157E00E48FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B470EA12881157E00E48FD8 /* Build configuration list for PBXNativeTarget "FACEWASH-ACNECARE WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B470EA22881157E00E48FD8 /* Debug */,
+				9B470EA32881157E00E48FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B470EA52881157E00E48FD8 /* Build configuration list for PBXNativeTarget "FACEWASH-ACNECARE WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B470EA62881157E00E48FD8 /* Debug */,
+				9B470EA72881157E00E48FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B470EA92881157E00E48FD8 /* Build configuration list for PBXNativeTarget "FACEWASH-ACNECARE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B470EAA2881157E00E48FD8 /* Debug */,
+				9B470EAB2881157E00E48FD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B470E742881157B00E48FD8 /* Project object */;
+}
