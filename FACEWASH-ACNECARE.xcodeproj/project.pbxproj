@@ -28,6 +28,7 @@
 		9B470ECE28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
 		9B470ECF28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
 		9B470ED528811E0E00E48FD8 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */; };
+		9B470EDE2881A95E00E48FD8 /* WatchDatePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9B470EDD2881A95E00E48FD8 /* WatchDatePicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B470EDE2881A95E00E48FD8 /* WatchDatePicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +116,7 @@
 				9B470E822881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App */,
 				9B470E8D2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */,
 				9B470E7B2881157B00E48FD8 /* Products */,
+				9B470EDC2881A95E00E48FD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,6 +203,13 @@
 			path = Asset;
 			sourceTree = "<group>";
 		};
+		9B470EDC2881A95E00E48FD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,6 +226,9 @@
 				9B470E812881157B00E48FD8 /* PBXTargetDependency */,
 			);
 			name = "FACEWASH-ACNECARE";
+			packageProductDependencies = (
+				9B470ED928815D2200E48FD8 /* WatchDatePicker */,
+			);
 			productName = "FACEWASH-ACNECARE";
 			productReference = 9B470E7A2881157B00E48FD8 /* FACEWASH-ACNECARE.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -250,6 +263,9 @@
 			dependencies = (
 			);
 			name = "FACEWASH-ACNECARE WatchKit Extension";
+			packageProductDependencies = (
+				9B470EDD2881A95E00E48FD8 /* WatchDatePicker */,
+			);
 			productName = "FACEWASH-ACNECARE WatchKit Extension";
 			productReference = 9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -284,6 +300,9 @@
 				Base,
 			);
 			mainGroup = 9B470E732881157B00E48FD8;
+			packageReferences = (
+				9B470ED828815D2200E48FD8 /* XCRemoteSwiftPackageReference "watch-date-picker" */,
+			);
 			productRefGroup = 9B470E7B2881157B00E48FD8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -654,6 +673,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B470ED828815D2200E48FD8 /* XCRemoteSwiftPackageReference "watch-date-picker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freyaariel/watch-date-picker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B470ED928815D2200E48FD8 /* WatchDatePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B470ED828815D2200E48FD8 /* XCRemoteSwiftPackageReference "watch-date-picker" */;
+			productName = WatchDatePicker;
+		};
+		9B470EDD2881A95E00E48FD8 /* WatchDatePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B470ED828815D2200E48FD8 /* XCRemoteSwiftPackageReference "watch-date-picker" */;
+			productName = WatchDatePicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B470E742881157B00E48FD8 /* Project object */;
 }
