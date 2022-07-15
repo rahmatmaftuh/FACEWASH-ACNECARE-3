@@ -17,6 +17,12 @@
 		9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E962881157D00E48FD8 /* ComplicationController.swift */; };
 		9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E982881157E00E48FD8 /* Assets.xcassets */; };
 		9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */; };
+		9B470EB12881168C00E48FD8 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB02881168C00E48FD8 /* SoundView.swift */; };
+		9B470EB3288116AB00E48FD8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB2288116AB00E48FD8 /* TimerView.swift */; };
+		9B470EB5288116C100E48FD8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* SettingView.swift */; };
+		9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB6288116DF00E48FD8 /* AVService.swift */; };
+		9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB8288116FF00E48FD8 /* NotificationManager.swift */; };
+		9B470EBB2881171200E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470EBA2881171200E48FD8 /* siri.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B470E9D2881157E00E48FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B470E9E2881157E00E48FD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9B470EB02881168C00E48FD8 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
+		9B470EB2288116AB00E48FD8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		9B470EB4288116C100E48FD8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		9B470EB6288116DF00E48FD8 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
+		9B470EB8288116FF00E48FD8 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		9B470EBA2881171200E48FD8 /* siri.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = siri.mp3; path = ../../../../Downloads/siri.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +130,10 @@
 		9B470E8D2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9B470EAF2881166A00E48FD8 /* Asset */,
+				9B470EAE2881165F00E48FD8 /* ViewModel */,
+				9B470EAD2881164B00E48FD8 /* Model */,
+				9B470EAC2881164300E48FD8 /* View */,
 				9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */,
 				9B470E902881157D00E48FD8 /* ContentView.swift */,
 				9B470E922881157D00E48FD8 /* NotificationController.swift */,
@@ -137,6 +153,40 @@
 				9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9B470EAC2881164300E48FD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B470EB02881168C00E48FD8 /* SoundView.swift */,
+				9B470EB2288116AB00E48FD8 /* TimerView.swift */,
+				9B470EB4288116C100E48FD8 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B470EAD2881164B00E48FD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B470EB6288116DF00E48FD8 /* AVService.swift */,
+				9B470EB8288116FF00E48FD8 /* NotificationManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B470EAE2881165F00E48FD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9B470EAF2881166A00E48FD8 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				9B470EBA2881171200E48FD8 /* siri.mp3 */,
+			);
+			path = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +306,7 @@
 			files = (
 				9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */,
 				9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */,
+				9B470EBB2881171200E48FD8 /* siri.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B470EB3288116AB00E48FD8 /* TimerView.swift in Sources */,
 				9B470E932881157D00E48FD8 /* NotificationController.swift in Sources */,
+				9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */,
 				9B470E912881157D00E48FD8 /* ContentView.swift in Sources */,
+				9B470EB12881168C00E48FD8 /* SoundView.swift in Sources */,
+				9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */,
 				9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */,
+				9B470EB5288116C100E48FD8 /* SettingView.swift in Sources */,
 				9B470E8F2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift in Sources */,
 				9B470E952881157D00E48FD8 /* NotificationView.swift in Sources */,
 			);
