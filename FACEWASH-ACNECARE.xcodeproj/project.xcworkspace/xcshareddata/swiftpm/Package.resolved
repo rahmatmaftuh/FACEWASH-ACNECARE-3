@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "watch-date-picker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/freyaariel/watch-date-picker",
+      "state" : {
+        "revision" : "f7e1cd798796a6ade2e34cf9189e3a128c06f88b",
+        "version" : "0.1.1"
+      }
+    }
+  ],
+  "version" : 2
+}
