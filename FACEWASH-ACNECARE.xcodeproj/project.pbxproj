@@ -19,7 +19,7 @@
 		9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */; };
 		9B470EB12881168C00E48FD8 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB02881168C00E48FD8 /* SoundView.swift */; };
 		9B470EB3288116AB00E48FD8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB2288116AB00E48FD8 /* TimerView.swift */; };
-		9B470EB5288116C100E48FD8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* SettingView.swift */; };
+		9B470EB5288116C100E48FD8 /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* SetReminderView.swift */; };
 		9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB6288116DF00E48FD8 /* AVService.swift */; };
 		9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB8288116FF00E48FD8 /* NotificationManager.swift */; };
 		9B470EBF288118C300E48FD8 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EBE288118C300E48FD8 /* LocationModel.swift */; };
@@ -89,7 +89,7 @@
 		9B470E9E2881157E00E48FD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		9B470EB02881168C00E48FD8 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		9B470EB2288116AB00E48FD8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		9B470EB4288116C100E48FD8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		9B470EB4288116C100E48FD8 /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
 		9B470EB6288116DF00E48FD8 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
 		9B470EB8288116FF00E48FD8 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		9B470EBE288118C300E48FD8 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			children = (
 				9B470EB02881168C00E48FD8 /* SoundView.swift */,
 				9B470EB2288116AB00E48FD8 /* TimerView.swift */,
-				9B470EB4288116C100E48FD8 /* SettingView.swift */,
+				9B470EB4288116C100E48FD8 /* SetReminderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -358,7 +358,7 @@
 				9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */,
 				9B470ED528811E0E00E48FD8 /* SoundViewModel.swift in Sources */,
 				9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */,
-				9B470EB5288116C100E48FD8 /* SettingView.swift in Sources */,
+				9B470EB5288116C100E48FD8 /* SetReminderView.swift in Sources */,
 				9B470EC32881192100E48FD8 /* TimerModel.swift in Sources */,
 				9B470E8F2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift in Sources */,
 				9B470E952881157D00E48FD8 /* NotificationView.swift in Sources */,

@@ -12,53 +12,42 @@ struct SoundView: View {
     @State private var isStarted = false
     @State var isPlayingGuide = false
     
-    
     var body: some View {
         NavigationView {
             
-        
             VStack{
-               
-                ZStack{
-                    Circle()
-                        .foregroundColor(Color("startColor"))
-                    Text("START")
-                        .foregroundColor(Color.black)
-                        .font(.system(size: 19))
-                        .bold()
-                        .italic()
-
-
-
-                }
-                .onTapGesture {
-                    isStarted.toggle()
-                    isPlayingGuide.toggle()
-                    if isPlayingGuide {
-                        AVService.shared.playMusic()
-                    }
+                ZStack {
+                    NavigationLink("", destination: TimerView(), isActive: $isStarted)
+                        .clipShape(Circle())
                     
+                    Button(action: {
+                        isStarted.toggle()
+                        isPlayingGuide.toggle()
+                        if isPlayingGuide {
+                            AVService.shared.playMusic()
+                        }
+                    }, label: {
+                        Text("START")
+                            .foregroundColor(Color.black)
+                            .font(.system(size: 19))
+                            .bold()
+                            .italic()
+                            .frame(width: 130, height: 130)
+                        
+                    })
+                    .buttonStyle(PlainButtonStyle())
+                    .background(Color("startColor"))
+                    .clipShape(Circle())
+                }
             }
-                NavigationLink("", destination: TimerView(), isActive: $isStarted)
-
-//                NavigationLink(destination: TimerView(), label: {
-//                    ZStack{
-//                        Circle()
-//                        Text("START")
-//                            .foregroundColor(.black)
-//                    }
-//                })
             .navigationTitle("Acnecare")
             .navigationBarTitleDisplayMode(.inline)
-            //belum bisa warnanya
             .foregroundColor(Color("navColor"))
             
-            }
             
             
-           
         }
-}
+    }
 }
 
 struct SoundView_Previews: PreviewProvider {
