@@ -9,38 +9,18 @@
 import SwiftUI
 import WatchDatePicker
 
-struct SettingView: View {
+struct SetReminderView: View {
+    @State var currentTimeNight = Date()
+   
     @State var value = Calendar.current.date(bySettingHour: 10, minute: 09, second: 0, of: Date())!
 
     var body: some View {
       TabView {
         Form {
-          WatchDatePicker.DatePicker("Date & Time", selection: $value, twentyFourHour: false)
-          WatchDatePicker.DatePicker("Date & Time (24h)", selection: $value, twentyFourHour: true)
+            WatchDatePicker.DatePicker ( "Change time", selection: $value, twentyFourHour: true)
+            
         }
         
-        Form {
-          DatePicker("Date", selection: $value, mode: .date, maximumDate: Date())
-        }
-        
-        Form {
-          DatePicker("Time", selection: $value, mode: .time, twentyFourHour: false)
-          DatePicker("Time (24h)", selection: $value, mode: .time, twentyFourHour: true)
-        }
-
-        NavigationView {
-          DatePickerView(selection: $value)
-        }
-
-        NavigationView {
-          DatePickerView(selection: $value, mode: .date)
-            .environment(\.locale, Locale(identifier: "fr"))
-        }
-
-        NavigationView {
-          DatePickerView(selection: $value, mode: .date, confirmationTitleKey: "Yaaas", confirmationColor: .mint)
-            .environment(\.locale, Locale(identifier: "ja"))
-        }
 
         NavigationView {
           TimePickerView(
@@ -81,7 +61,7 @@ struct SettingView: View {
           )
   //          .offset(y: 5)
         }
-      }
+      }.navigationTitle("Reminder")
       .tabViewStyle(.page(indexDisplayMode: .never))
       .accentColor(.orange)
     }
@@ -89,6 +69,49 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        MainSettingView()
+    }
+}
+
+
+struct MainSettingView : View {
+    @State var changeTime = false
+    @State var voiceOver = false
+    var body: some View {
+        
+        VStack{
+            
+            ZStack{
+                NavigationLink("", destination: SetReminderView(), isActive: $changeTime)
+                    .opacity(0)
+            Button(action: {
+                changeTime.toggle()
+                
+            }, label: {
+                HStack{
+                    Text("Set reminder")
+                    Spacer()
+                    
+                }
+            })
+                
+            }
+            
+            Button(action: {
+                if voiceOver{
+                }else {
+                    AVService.shared.player?.stop()
+                }
+                
+            }, label: {
+                HStack{
+                    Toggle("Voice over", isOn: $voiceOver)
+                }
+            })
+            Spacer()
+
+            
+        }.navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
     }
 }

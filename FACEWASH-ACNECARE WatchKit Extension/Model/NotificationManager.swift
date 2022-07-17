@@ -103,6 +103,7 @@ struct LocalNotificationMorning{
         self.dateComponents = nil
         self.repeats = repeats
     }
+    
     internal init (identifier: String,
                    title: String,
                    body: String,
@@ -119,7 +120,6 @@ struct LocalNotificationMorning{
     enum ScheduleType{
         case time,calendar
     }
-    
     
     var identifier: String
     var ScheduleType: ScheduleType
