@@ -30,7 +30,7 @@ struct CountdownView: View {
                     .stroke(Color.green.opacity(0.2), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                 Circle()
                     .trim(from:0, to:1 - ((defaultTimeRemaining-TimeRemaining)/defaultTimeRemaining))
-                    .stroke( Color.blue,
+                    .stroke( Color.yellow,
                         style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                     .rotationEffect(.degrees(-90))
                     .animation(.easeInOut)
