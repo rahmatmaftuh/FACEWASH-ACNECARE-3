@@ -34,33 +34,30 @@ class NotificationManager {
         
         //MARK: TRIGGER
         
-     //   let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
-       
-        
-        //calendar trigger
-//        var dateComponents = DateComponents()
-//        dateComponents.hour = 21
-//        dateComponents.minute = 23
-//
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+   //     calendar trigger
+        var dateComponents = DateComponents()
+        dateComponents.hour = 13
+        dateComponents.minute = 16
+
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         
         
         //location trigger
         
-        
-        
-        let coordinates = CLLocationCoordinate2D(latitude: 40.00, longitude: 50.0)
-        let region = CLCircularRegion(
-            center: coordinates,
-            radius: 100,
-            identifier: UUID().uuidString)
-        region.notifyOnEntry = true
-        region.notifyOnExit = false
-        
-        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
-        
-        
+//
+//
+//        let coordinates = CLLocationCoordinate2D(latitude: 40.00, longitude: 50.0)
+//        let region = CLCircularRegion(
+//            center: coordinates,
+//            radius: 100,
+//            identifier: UUID().uuidString)
+//        region.notifyOnEntry = true
+//        region.notifyOnExit = false
+//
+//        let trigger = UNLocationNotificationTrigger(region: region, repeats: true)
+//
+//
         
         let request = UNNotificationRequest(identifier:UUID().uuidString,
                                             content: content,
@@ -87,11 +84,11 @@ class NotificationManager {
 struct NotificationView: View {
     var body: some View {
         VStack{
-        Button("Request permission"){
-            NotificationManager.instance.requestAuthorization()
-        }
+ 
+           
         
         Button("Schedule Notification"){
+            NotificationManager.instance.requestAuthorization()
             NotificationManager.instance.scheduleNotification()
         }
         }
