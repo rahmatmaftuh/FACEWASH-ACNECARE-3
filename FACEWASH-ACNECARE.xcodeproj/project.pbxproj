@@ -22,7 +22,6 @@
 		9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E962881157D00E48FD8 /* ComplicationController.swift */; };
 		9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E982881157E00E48FD8 /* Assets.xcassets */; };
 		9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */; };
-		9B470EB12881168C00E48FD8 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB02881168C00E48FD8 /* SoundView.swift */; };
 		9B470EB3288116AB00E48FD8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB2288116AB00E48FD8 /* TimerView.swift */; };
 		9B470EB5288116C100E48FD8 /* ChangeTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* ChangeTimeView.swift */; };
 		9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB6288116DF00E48FD8 /* AVService.swift */; };
@@ -36,6 +35,7 @@
 		9B470EDE2881A95E00E48FD8 /* WatchDatePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9B470EDD2881A95E00E48FD8 /* WatchDatePicker */; };
 		9B470EE02883A04000E48FD8 /* GuidelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EDF2883A04000E48FD8 /* GuidelineView.swift */; };
 		9B470EE22883A22100E48FD8 /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EE12883A22100E48FD8 /* SetReminderView.swift */; };
+		9BAA04A2288530DB005E07D0 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA04A1288530DB005E07D0 /* FinishView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +97,6 @@
 		9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B470E9D2881157E00E48FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B470E9E2881157E00E48FD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		9B470EB02881168C00E48FD8 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		9B470EB2288116AB00E48FD8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9B470EB4288116C100E48FD8 /* ChangeTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimeView.swift; sourceTree = "<group>"; };
 		9B470EB6288116DF00E48FD8 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		9B470EDF2883A04000E48FD8 /* GuidelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelineView.swift; sourceTree = "<group>"; };
 		9B470EE12883A22100E48FD8 /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
+		9BAA04A1288530DB005E07D0 /* FinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,13 +181,13 @@
 		9B470EAC2881164300E48FD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9B470EB02881168C00E48FD8 /* SoundView.swift */,
 				9A2CC66528839E2D00D31308 /* StartCountdownView.swift */,
 				9A2CC66628839E2D00D31308 /* CountdownView.swift */,
 				9B470EB2288116AB00E48FD8 /* TimerView.swift */,
 				9B470EB4288116C100E48FD8 /* ChangeTimeView.swift */,
 				9B470EDF2883A04000E48FD8 /* GuidelineView.swift */,
 				9B470EE12883A22100E48FD8 /* SetReminderView.swift */,
+				9BAA04A1288530DB005E07D0 /* FinishView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,12 +369,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BAA04A2288530DB005E07D0 /* FinishView.swift in Sources */,
 				9B470EB3288116AB00E48FD8 /* TimerView.swift in Sources */,
 				9B470E932881157D00E48FD8 /* NotificationController.swift in Sources */,
 				9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */,
 				9B470EBF288118C300E48FD8 /* LocationModel.swift in Sources */,
 				9B470E912881157D00E48FD8 /* ContentView.swift in Sources */,
-				9B470EB12881168C00E48FD8 /* SoundView.swift in Sources */,
 				9A2CC66828839E2D00D31308 /* CountdownView.swift in Sources */,
 				9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */,
 				9B470EE22883A22100E48FD8 /* SetReminderView.swift in Sources */,
