@@ -7,9 +7,105 @@
 
 import SwiftUI
 
-struct SetReminderView: View {
+
+
+struct MainSettingView : View {
+    @State var changeTime = false
+    @State var voiceOver = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            ZStack{
+                NavigationLink("", destination: ChangeTimeView(), isActive: $changeTime)
+                    .opacity(0)
+            Button(action: {
+                changeTime.toggle()
+                
+            }, label: {
+                HStack{
+                    Text("Set reminder")
+                    Spacer()
+                    
+                }
+            })
+                
+            }
+            
+            Button(action: {
+                if voiceOver{
+                }else {
+                    AVService.shared.player?.stop()
+                }
+                
+            }, label: {
+                HStack{
+                    Toggle("Voice over", isOn: $voiceOver)
+                }
+            })
+            Spacer()
+
+            
+        }.navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+
+
+struct SetReminderView: View {
+    @State private var isMorningPicker = false
+    @State private var isEveningPicker = false
+    @State private var isLocation = false
+    
+    var body: some View {
+        ScrollView {
+            HStack{
+                Image(systemName: "sun.max")
+                Text("Morning")
+                Spacer()
+                
+            }
+            Toggle(isOn: $isMorningPicker){
+                VStack(alignment: .leading){
+                    Text("08.00")
+                        .fontWeight(.semibold)
+                    Text("Change time")
+                        .font(.system(size: 15))
+                        .opacity(0.5)
+                }
+            }
+            
+            HStack{
+                Image(systemName: "moon")
+                Text("Morning")
+                Spacer()
+            }
+            Toggle(isOn: $isEveningPicker){
+                VStack(alignment: .leading){
+                    Text("08.00")
+                        .fontWeight(.semibold)
+                    Text("Change time")
+                        .font(.system(size: 15))
+                        .opacity(0.5)
+                }
+            }
+            HStack{
+                Image(systemName: "location")
+                Text("Morning")
+                Spacer()
+                
+            }
+            Toggle(isOn: $isMorningPicker){
+                VStack(alignment: .leading){
+                    Text("Home")
+                        .fontWeight(.semibold)
+                    Text("When return")
+                        .font(.system(size: 15))
+                        .opacity(0.5)
+                }
+            }
+            
+        }
+        
     }
 }
 
@@ -18,3 +114,5 @@ struct SetReminderView_Previews: PreviewProvider {
         SetReminderView()
     }
 }
+
+
