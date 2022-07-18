@@ -29,4 +29,25 @@ class AVService{
     }
 }
 
+//MARK: BEEP COUNTDOWN
 
+class AVServiceCountdown{
+   var player : AVAudioPlayer?
+   static let shared = AVServiceCountdown()
+    
+    func playMusic(){
+        //akses alamat
+        let path = Bundle.main.path(forResource: "beepCountdown", ofType:"mp3") ?? ""
+        //ubah alamatnya jadi url
+        let url = URL(fileURLWithPath: path)
+        do {
+            //masukin url ke audio player
+            player = try AVAudioPlayer(contentsOf: url)
+            
+            //player di mainkan
+            player?.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
+}

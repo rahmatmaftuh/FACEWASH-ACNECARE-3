@@ -8,8 +8,8 @@
 import SwiftUI
 
 let defaultTimeRemaining: CGFloat = 3
-let lineWidth: CGFloat = 20
-let radius: CGFloat = 50
+let lineWidth: CGFloat = 15
+let radius: CGFloat = 20
 
 struct CountdownView: View {
     
@@ -27,21 +27,24 @@ struct CountdownView: View {
                 NavigationLink("",destination: TimerView(), isActive: $startTimerView )
                     .opacity(0)
                 Circle()
-                    .stroke(Color.green.opacity(0.2), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                    .stroke(Color("startColor").opacity(0.5), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                    .frame(width: 130, height: 130)
                 Circle()
                     .trim(from:0, to:1 - ((defaultTimeRemaining-TimeRemaining)/defaultTimeRemaining))
-                    .stroke( Color.yellow,
+                    .stroke( Color("startColor"),
                         style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                     .rotationEffect(.degrees(-90))
                     .animation(.easeInOut)
+                    .frame(width: 130, height: 130)
                 
-                Text("\(Int(TimeRemaining))")               .foregroundColor(Color.green)
+                Text("\(Int(TimeRemaining))")               .foregroundColor(Color("startColor"))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .onReceive(timer, perform: { _ in
                         guard isActive else{return}
                         if TimeRemaining > 0{
                             TimeRemaining -= 1
+                            AVServiceCountdown.shared.playMusic()
                         }
 //                        else if TimeRemaining == 0{
 //                        }
@@ -64,5 +67,6 @@ struct CountdownView_Previews: PreviewProvider {
         CountdownView()
     }
 }
+
 
 
