@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9A2CC66728839E2D00D31308 /* StartCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2CC66528839E2D00D31308 /* StartCountdownView.swift */; };
 		9A2CC66828839E2D00D31308 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2CC66628839E2D00D31308 /* CountdownView.swift */; };
+		9AF5B41B2884817C00FF63F2 /* beepCountdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF5B41A2884817C00FF63F2 /* beepCountdown.mp3 */; };
+		9AF5B41C2884817C00FF63F2 /* beepCountdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF5B41A2884817C00FF63F2 /* beepCountdown.mp3 */; };
+		9AF5B41D2884817C00FF63F2 /* beepCountdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF5B41A2884817C00FF63F2 /* beepCountdown.mp3 */; };
 		9B470E7F2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E832881157C00E48FD8 /* Assets.xcassets */; };
 		9B470E8A2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -80,6 +83,7 @@
 /* Begin PBXFileReference section */
 		9A2CC66528839E2D00D31308 /* StartCountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountdownView.swift; sourceTree = "<group>"; };
 		9A2CC66628839E2D00D31308 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		9AF5B41A2884817C00FF63F2 /* beepCountdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beepCountdown.mp3; sourceTree = "<group>"; };
 		9B470E7A2881157B00E48FD8 /* FACEWASH-ACNECARE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACEWASH-ACNECARE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACEWASH-ACNECARE WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B470E832881157C00E48FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				9B470ECC28811DC000E48FD8 /* siri.mp3 */,
+				9AF5B41A2884817C00FF63F2 /* beepCountdown.mp3 */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF5B41B2884817C00FF63F2 /* beepCountdown.mp3 in Resources */,
 				9B470ECD28811DC000E48FD8 /* siri.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +347,7 @@
 			files = (
 				9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */,
 				9B470ECE28811DC000E48FD8 /* siri.mp3 in Resources */,
+				9AF5B41C2884817C00FF63F2 /* beepCountdown.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF5B41D2884817C00FF63F2 /* beepCountdown.mp3 in Resources */,
 				9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */,
 				9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */,
 				9B470ECF28811DC000E48FD8 /* siri.mp3 in Resources */,

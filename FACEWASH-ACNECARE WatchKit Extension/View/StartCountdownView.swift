@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 
 struct StartCountdownView: View {
@@ -15,16 +16,22 @@ struct StartCountdownView: View {
     var body: some View {
         if isPressed{
             CountdownView()
+            
+           
         }else{
             VStack{
                 ZStack{
                     Circle()
+                        .frame(width: 130, height: 130)
+                        .foregroundColor(Color("startColor"))
                     
                     Text("START")
-                        .font(.title2)
-                        .fontWeight(.heavy)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color.black)
+                        .font(.system(size: 19))
+                        .bold()
                         .italic()
+                     
+                    
                        
                 
                 }
