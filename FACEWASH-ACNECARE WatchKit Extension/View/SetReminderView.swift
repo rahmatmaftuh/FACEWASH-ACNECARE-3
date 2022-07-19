@@ -6,17 +6,23 @@
 //
 
 import SwiftUI
-
+import WatchDatePicker
 
 
 struct MainSettingView : View {
     @State var changeTime = false
     @State var voiceOver = false
+    @StateObject var notifManager = LocalNotificationManager()
+    @State var selected = Date()
+    @Environment(\.scenePhase) var scenePhase
+
     var body: some View {
         
         VStack{
             ZStack{
-                NavigationLink("", destination: ChangeTimeView(), isActive: $changeTime)
+                NavigationLink("", destination: SetReminderView()
+                    .environmentObject(notifManager)
+                               , isActive: $changeTime)
                     .opacity(0)
             Button(action: {
                 changeTime.toggle()
@@ -55,6 +61,10 @@ struct SetReminderView: View {
     @State private var isMorningPicker = false
     @State private var isEveningPicker = false
     @State private var isLocation = false
+    @EnvironmentObject var notifManager : LocalNotificationManager
+    @State var selected = Date()
+    @Environment(\.scenePhase) var scenePhase
+    
     
     var body: some View {
         ScrollView {
@@ -65,12 +75,10 @@ struct SetReminderView: View {
                 
             }
             Toggle(isOn: $isMorningPicker){
-                VStack(alignment: .leading){
-                    Text("08.00")
-                        .fontWeight(.semibold)
-                    Text("Change time")
-                        .font(.system(size: 15))
-                        .opacity(0.5)
+                DatePicker("\(selected)", selection: $selected, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true, onCompletion: nil )
+                
+                if isMorningPicker {
+                   
                 }
             }
             
@@ -103,8 +111,33 @@ struct SetReminderView: View {
                         .opacity(0.5)
                 }
             }
+            Button("Save") {
+                Task{
+                    let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected )
+                    let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
+                                                                          title: "Wash your face",
+                                                                          body: "It's morning already",
+                                                                          dateComponents: dateComponents,
+                                                                          repeats: true)
+                    await notifManager.schedule(localNotification: localNotificationMorning)
+                    
+                }
+            }
             
-        }
+        }  .environmentObject(notifManager)
+            .navigationTitle("Reminder")
+            .accentColor(.orange)
+            .task{
+                try? await notifManager.requestAuthorization()
+            }
+            .onChange(of: scenePhase){newValue in
+                if newValue == .active{
+                    Task {
+                        await notifManager.getCurrentSettings()
+                         await notifManager.getPendingRequests()
+                    }
+                }
+            }
         
     }
 }
