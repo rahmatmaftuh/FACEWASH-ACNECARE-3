@@ -6,6 +6,8 @@
 //
 //TUTORIAL : https://www.youtube.com/watch?v=kIaO4UtzBHI
 
+//
+
 import SwiftUI
 import UserNotifications
 
@@ -17,10 +19,7 @@ struct TimerView: View {
     @State private var toEndView = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    let textTitle = ["Wash your forehead",
-                    "Wash your cheek",
-                    "Wash your Tzone",
-                    "Wash your mind"]
+    
     var hapticTypes = [
         "Notification": WKHapticType.notification,
         "DirectionUp": WKHapticType.directionUp,
@@ -36,40 +35,87 @@ struct TimerView: View {
     
     var body: some View {
         ZStack{
-            NavigationLink("",destination: StartCountdownView(), isActive: $toEndView)
+            NavigationLink("",destination: FinishView(), isActive: $toEndView)
                 .opacity(0)
       
             
            // WKInterfaceDevice.current().play(hapticType!)
-            
-//        if TimerViewCountdown == 45 && timerRunning{
-////            TimerViewCountdown -= 2
-////          titleTest = "Wash your face"
-//
-//
-//        }else if TimerViewCountdown == 30 && timerRunning{
-////            TimerViewCountdown -= 3
-////            titleTest = "Wash your mind"
-//
-//        }
         
     
         VStack{
-            
-            //Text("\(textTitle)")
+
             
             if TimerViewCountdown > 40 && timerRunning {
                 //AVService.shared.playMusic()
-                Text("Wash your forehead")
-//                    .onReceive(<#T##publisher: Publisher##Publisher#>, perform: <#T##(Publisher.Output) -> Void#>)
+                Text("Clean nose area for 10 seconds")
+                    .foregroundColor(Color("titleGuidelineColor"))
+                    .font(.system(size: 17))
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .onReceive(timer) { _ in
+                       
+                        if TimerViewCountdown == 49{
+                         
+                            GuidelineStep1.shared.playMusic()
+//HAPTIC DI WATCHOS GAPAKE UIIMPACT DSB, TAPI PAKENYA WKHAPTICTYPE
+                            
+//Resource: https://makeapppie.com/2016/08/29/make-a-watch-os-haptic-catalog-with-a-picker/
+                        }
+                       
+                    }
+                
+                Spacer()
                 
             } else if TimerViewCountdown > 30 && timerRunning {
-                Text("Wash your mind")
+                Text("Clean forehead area for 10 seconds")
+                    .foregroundColor(Color("titleGuidelineColor"))
+                    .font(.system(size: 17))
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .onReceive(timer) { _ in
+
+                        if TimerViewCountdown == 40{
+
+                            GuidelineStep2.shared.playMusic()
+                        }
+
+                    }
+               
+                   
+                Spacer()
+                
             }else if TimerViewCountdown > 10 && timerRunning {
-                Text("Wash your car")
+                Text("Clean cheeks area for 20 seconds")
+                    .foregroundColor(Color("titleGuidelineColor"))
+                    .font(.system(size: 17))
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .onReceive(timer) { _ in
+
+                        if TimerViewCountdown == 30{
+
+                            GuidelineStep3.shared.playMusic()
+                        }
+
+                    }
+                Spacer()
             }
             else{
-                Text("Wash your heart")
+                Text("Clean chin area for 10 seconds")
+                    .foregroundColor(Color("titleGuidelineColor"))
+                    .font(.system(size: 17))
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                    .onReceive(timer) { _ in
+
+                        if TimerViewCountdown == 10{
+
+                            GuidelineStep1.shared.playMusic()
+
+                        }
+
+                    }
                 
             }
             Text("\(TimerViewCountdown)")
@@ -83,11 +129,14 @@ struct TimerView: View {
                         toEndView = true
                     }
                 }
-                .font(.system(size: 80, weight: .heavy))
+                .font(.system(size: 70, weight: .heavy))
                 .foregroundColor(Color("startColor"))
+                
             
         
         }
+        .frame(width: 160, height: 130)
+        .position(x: 95, y: 80)
         }.navigationBarBackButtonHidden(true)
         
 
@@ -100,6 +149,8 @@ struct TimerView_Previews: PreviewProvider {
         TimerView()
     }
 }
+
+
 
 //enum WKHapticType : Int{
 //    case Notification

@@ -9,7 +9,22 @@ import SwiftUI
 
 struct FinishView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text("Finish Facial Wash")
+                .foregroundColor(Color("startColor"))
+                .font(.system(size: 17))
+                .bold()
+            
+            
+            Text("The greatest gift to yourself is a little bit of attention")
+                .multilineTextAlignment(.center)
+            Spacer()
+            
+            Button("Done") {
+                print("Button tapped!")
+            }
+                
+        }
     }
 }
 

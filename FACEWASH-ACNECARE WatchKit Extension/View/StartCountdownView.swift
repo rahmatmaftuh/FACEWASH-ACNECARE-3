@@ -38,7 +38,7 @@ struct StartCountdownView: View {
                 .onTapGesture {
                     isPressed = true
                 }
-                Text("Start wash your face")
+                //Text("Start wash your face")
             }
         }
     }
