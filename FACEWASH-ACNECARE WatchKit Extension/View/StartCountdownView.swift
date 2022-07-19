@@ -40,8 +40,11 @@ struct StartCountdownView: View {
                 }
                 //Text("Start wash your face")
             }
+            .navigationBarBackButtonHidden(true)
         }
+        
     }
+    
 }
 
 struct StartCountdownView_Previews: PreviewProvider {
