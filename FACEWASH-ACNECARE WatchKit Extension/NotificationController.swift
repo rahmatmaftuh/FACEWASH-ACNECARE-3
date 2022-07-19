@@ -9,10 +9,10 @@ import WatchKit
 import SwiftUI
 import UserNotifications
 
-class NotificationController: WKUserNotificationHostingController<NotificationView> {
+class NotificationController: WKUserNotificationHostingController<MorningPickerView> {
 
-    override var body: NotificationView {
-        return NotificationView()
+    override var body: MorningPickerView {
+        return MorningPickerView()
     }
 
     override func willActivate() {

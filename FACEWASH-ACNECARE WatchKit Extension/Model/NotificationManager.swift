@@ -37,7 +37,7 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
     func getCurrentSettings() async{
         let currentSettings = await notificationCenter.notificationSettings()
         isGranted = (currentSettings.authorizationStatus == .authorized)
-//        print(isGranted)
+        print(isGranted)
     }
     
 //    func openSettings() {
@@ -50,25 +50,18 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
 //        }
 //    }
     
-    func schedule(localNotificationMorning: LocalNotificationMorning) async {
+    func schedule(localNotification: LocalNotificationVar) async {
         let content = UNMutableNotificationContent()
-        content.title = localNotificationMorning.title
-        content.body = localNotificationMorning.body
+        content.title = localNotification.title
+        content.body = localNotification.body
         content.sound = .default
         
-        if localNotificationMorning.ScheduleType == .time{
-        guard let timeInterval = localNotificationMorning.timeInterval else {return}
-        
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: localNotificationMorning.repeats)
-            let request = UNNotificationRequest(identifier: localNotificationMorning.identifier, content: content, trigger: trigger)
-            try? await notificationCenter.add(request)
-        } else{
-            guard let dateComponents = localNotificationMorning.dateComponents else { return }
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: localNotificationMorning.repeats)
-            let request = UNNotificationRequest(identifier: localNotificationMorning
+            guard let dateComponents = localNotification.dateComponents else { return }
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: localNotification.repeats)
+            let request = UNNotificationRequest(identifier: localNotification
                 .identifier, content: content, trigger: trigger)
             try? await notificationCenter.add(request)
-        }
+        
         await getPendingRequests()
         
     }
@@ -89,40 +82,22 @@ class LocalNotificationManager: NSObject, ObservableObject, UNUserNotificationCe
 
 
 
-struct LocalNotificationMorning{
-    internal init (identifier: String,
-                   title: String,
-                   body: String,
-                   timeInterval: Double,
-                   repeats: Bool){
-        self.identifier = identifier
-        self.ScheduleType = .time
-        self.title = title
-        self.body = body
-        self.timeInterval = timeInterval
-        self.dateComponents = nil
-        self.repeats = repeats
-    }
-    
+struct LocalNotificationVar{
+
     internal init (identifier: String,
                    title: String,
                    body: String,
                    dateComponents: DateComponents,
                    repeats: Bool){
         self.identifier = identifier
-        self.ScheduleType = .calendar
         self.title = title
         self.body = body
         self.timeInterval = nil
         self.dateComponents = dateComponents
         self.repeats = repeats
             }
-    enum ScheduleType{
-        case time,calendar
-    }
     
     var identifier: String
-    var ScheduleType: ScheduleType
     var title: String
     var body: String
     var timeInterval: Double?

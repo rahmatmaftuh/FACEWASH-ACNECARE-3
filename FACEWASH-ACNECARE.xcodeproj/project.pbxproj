@@ -23,7 +23,7 @@
 		9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E982881157E00E48FD8 /* Assets.xcassets */; };
 		9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E9B2881157E00E48FD8 /* Preview Assets.xcassets */; };
 		9B470EB3288116AB00E48FD8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB2288116AB00E48FD8 /* TimerView.swift */; };
-		9B470EB5288116C100E48FD8 /* ChangeTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* ChangeTimeView.swift */; };
+		9B470EB5288116C100E48FD8 /* MorningPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB4288116C100E48FD8 /* MorningPickerView.swift */; };
 		9B470EB7288116DF00E48FD8 /* AVService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB6288116DF00E48FD8 /* AVService.swift */; };
 		9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB8288116FF00E48FD8 /* NotificationManager.swift */; };
 		9B470EBF288118C300E48FD8 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EBE288118C300E48FD8 /* LocationModel.swift */; };
@@ -98,7 +98,7 @@
 		9B470E9D2881157E00E48FD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B470E9E2881157E00E48FD8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		9B470EB2288116AB00E48FD8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
-		9B470EB4288116C100E48FD8 /* ChangeTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimeView.swift; sourceTree = "<group>"; };
+		9B470EB4288116C100E48FD8 /* MorningPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningPickerView.swift; sourceTree = "<group>"; };
 		9B470EB6288116DF00E48FD8 /* AVService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVService.swift; sourceTree = "<group>"; };
 		9B470EB8288116FF00E48FD8 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		9B470EBE288118C300E48FD8 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 				9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */,
 				9B470E902881157D00E48FD8 /* ContentView.swift */,
 				9B470E922881157D00E48FD8 /* NotificationController.swift */,
-				9B470E942881157D00E48FD8 /* NotificationView.swift */,
 				9B470E962881157D00E48FD8 /* ComplicationController.swift */,
 				9B470E982881157E00E48FD8 /* Assets.xcassets */,
 				9B470E9D2881157E00E48FD8 /* Info.plist */,
@@ -184,9 +183,10 @@
 				9A2CC66528839E2D00D31308 /* StartCountdownView.swift */,
 				9A2CC66628839E2D00D31308 /* CountdownView.swift */,
 				9B470EB2288116AB00E48FD8 /* TimerView.swift */,
-				9B470EB4288116C100E48FD8 /* ChangeTimeView.swift */,
-				9B470EDF2883A04000E48FD8 /* GuidelineView.swift */,
 				9B470EE12883A22100E48FD8 /* SetReminderView.swift */,
+				9B470EB4288116C100E48FD8 /* MorningPickerView.swift */,
+				9B470E942881157D00E48FD8 /* NotificationView.swift */,
+				9B470EDF2883A04000E48FD8 /* GuidelineView.swift */,
 				9BAA04A1288530DB005E07D0 /* FinishView.swift */,
 			);
 			path = View;
@@ -381,7 +381,7 @@
 				9B470ED528811E0E00E48FD8 /* SoundViewModel.swift in Sources */,
 				9B470E972881157D00E48FD8 /* ComplicationController.swift in Sources */,
 				9A2CC66728839E2D00D31308 /* StartCountdownView.swift in Sources */,
-				9B470EB5288116C100E48FD8 /* ChangeTimeView.swift in Sources */,
+				9B470EB5288116C100E48FD8 /* MorningPickerView.swift in Sources */,
 				9B470EC32881192100E48FD8 /* TimerModel.swift in Sources */,
 				9B470E8F2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift in Sources */,
 				9B470E952881157D00E48FD8 /* NotificationView.swift in Sources */,
