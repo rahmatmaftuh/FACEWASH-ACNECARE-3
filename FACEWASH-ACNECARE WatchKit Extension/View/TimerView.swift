@@ -20,18 +20,26 @@ struct TimerView: View {
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    var hapticTypes = [
-        "Notification": WKHapticType.notification,
-        "DirectionUp": WKHapticType.directionUp,
-        "DirectionDown": WKHapticType.directionDown,
-        "Success": WKHapticType.success,
-        "Failure": WKHapticType.failure,
-        "Retry": WKHapticType.retry,
-        "Start": WKHapticType.start,
-        "Stop": WKHapticType.stop,
-        "Click": WKHapticType.click,
-    ]
+//    var hapticTypes = [
+//        "Notification": WKHapticType.notification,
+//        "DirectionUp": WKHapticType.directionUp,
+//        "DirectionDown": WKHapticType.directionDown,
+//        "Success": WKHapticType.success,
+//        "Failure": WKHapticType.failure,
+//        "Retry": WKHapticType.retry,
+//        "Start": WKHapticType.start,
+//        "Stop": WKHapticType.stop,
+//        "Click": WKHapticType.click,
+//    ]
    // let hapticType = hapticTypes["Notification"]
+    func play(_ type: WKHapticType){
+
+    }
+    
+//    func notifyUser(hapticType type: WKHapticType,
+//      repeatHandler: ((UnsafeMutablePointer<WKHapticType>) -> Time
+//    Interval)? = nil)
+    
     
     var body: some View {
         ZStack{
@@ -54,9 +62,10 @@ struct TimerView: View {
                     .multilineTextAlignment(.center)
                     .onReceive(timer) { _ in
                        
-                        if TimerViewCountdown == 49{
-                         
+                        if TimerViewCountdown == 50{
+//                            play(.Notification)
                             GuidelineStep1.shared.playMusic()
+                            
 //HAPTIC DI WATCHOS GAPAKE UIIMPACT DSB, TAPI PAKENYA WKHAPTICTYPE
                             
 //Resource: https://makeapppie.com/2016/08/29/make-a-watch-os-haptic-catalog-with-a-picker/
@@ -94,6 +103,7 @@ struct TimerView: View {
 
                         if TimerViewCountdown == 30{
 
+//                            GuidelineStep3.shared.playMusic()
                             GuidelineStep3.shared.playMusic()
                         }
 
@@ -111,7 +121,7 @@ struct TimerView: View {
 
                         if TimerViewCountdown == 10{
 
-                            GuidelineStep1.shared.playMusic()
+                            GuidelineStep4.shared.playMusic()
 
                         }
 
@@ -152,14 +162,14 @@ struct TimerView_Previews: PreviewProvider {
 
 
 
-//enum WKHapticType : Int{
-//    case Notification
-////    case DirectionUp
-////    case DirectionDown
-////        case Success
-////        case Failure
-////        case Retry
-////        case Start
-////        case Stop
-////        case Click
-//}
+enum WKHapticType : Int{
+    case Notification
+    case DirectionUp
+    case DirectionDown
+        case Success
+        case Failure
+        case Retry
+        case Start
+        case Stop
+        case Click
+}

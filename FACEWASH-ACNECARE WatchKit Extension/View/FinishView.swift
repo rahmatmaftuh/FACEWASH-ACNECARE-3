@@ -20,9 +20,15 @@ struct FinishView: View {
                 .multilineTextAlignment(.center)
             Spacer()
             
-            Button("Done") {
-                print("Button tapped!")
+//            Button(action: {
+//                StartCountdownView()
+//            }){
+//                Text("Done")
+           // }
+            NavigationLink(destination: StartCountdownView()){
+                Text("Done")
             }
+            .navigationBarBackButtonHidden(true)
                 
         }
     }

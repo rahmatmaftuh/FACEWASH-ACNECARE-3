@@ -9,89 +9,78 @@ import SwiftUI
 
 struct GuidelineView: View {
     var body: some View {
-//        ScrollView{
-//            VStack{
-//                Text("Face Wash Guidance")
-//                    .foregroundColor(Color("startColor"))
-//                    .font(.system(size: 16))
-//                    .bold()
+        VStack{
+            
+//            List(stepsGuideline){ stepsGuideline in
+//                Section(
+//                    header:
+//                        Text("Face Wash Guidance")
+//                        .foregroundColor(Color("startColor"))
+//                        .font(.system(size: 12))
+//                        .bold()
 //
-//                Image("introFacewash")
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fit)
-//                    .cornerRadius(10)
+//                ){
+//                    Image("introFacewash")
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .cornerRadius(10)
+//                }
                 
                 
-                List{
-                    Section(
-                        header:
-                            Text("Face Wash Guidance")
-                                .foregroundColor(Color("startColor"))
-                                .font(.system(size: 12))
-                                .bold()
-                    
-                            ){
-                            Image("introFacewash")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(10)
-                            }
-                    
-//                    Section(
-//                        header:
-//                            Text("Steps")
-//                                .foregroundColor(Color("startColor"))
-//                                .font(.system(size: 12))
-//                                .bold()
 //
-//                            ){
-//                                Text("Rumah ke 2")
+//                Section(
 //
-//                                Text("Rumah ke 3")
-//                            }
-                    
+//
+//                ){
+            List{
+                Section(header: Text("Facewash")
+                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("startColor"))){
+                    Image("introFacewash")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(10)
+                }
+                Section(header: Text("Steps")
+                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("startColor"))
+                ) {
+                    ForEach(stepsGuideline){ Step in
+//                        Text(Step.imageStep)
                         
-                    Section(
-                        header:
-                            Text("Steps")
-                                .foregroundColor(Color("startColor"))
-                                .font(.system(size: 12))
-                                .bold()
-                    
-                            ){
-                                HStack(spacing: 20){
-                                Image("Group 2")
-                                    
-                                    
-//                                    .aspectRatio(contentMode: .fit)
-                                VStack{
-                                    Text("Rahmat")
-                                        .foregroundColor(Color("startColor"))
-                                        .font(.system(size: 16))
-                                        .bold()
-                                        
-                                        .padding(.leading)
-                                    
-                                    
-                                    Text ("rahmat 2xxxxxxxxxxxxxxx")
-                                        .foregroundColor(Color("startColor"))
-                                        .font(.system(size: 16))
-                                        .fontWeight(.regular)
-                                    
-                                    
-                                }
-                                
-                                //    Image(item.imageStep)
+                        HStack(spacing: 5){
+                            Image("\(Step.imageStep)")
+
+                            VStack(alignment: .leading){
+                                Text("\(Step.numberStep)")
+                                    .foregroundColor(Color("titleGuidelineColor"))
+                                    .font(.system(size: 17))
+                                    .bold()
+
+                                Text ("\(Step.descriptionStep)")
+                                    .foregroundColor(Color.white)
+                                    .font(.system(size: 17))
+                                    .fontWeight(.regular)
+
+
                             }
+
                         }
                     }
-                    
-                    
-                    
+                }
+                   
 //                }
-//            }
+                
+            }
+            
+            
+            
+
         }
     }
+}
 
 
 struct GuidelineView_Previews: PreviewProvider {
@@ -100,7 +89,7 @@ struct GuidelineView_Previews: PreviewProvider {
     }
 }
 
-struct stepGuideline: Identifiable{
+struct ListItem: Identifiable{
     var id = UUID()
     var imageStep: String
     var numberStep: String
@@ -108,13 +97,14 @@ struct stepGuideline: Identifiable{
 }
 
 var stepsGuideline = [
-    stepGuideline(imageStep: "Step1", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step2", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step3", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step4", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step5", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step6", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step7", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step8", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
-    stepGuideline(imageStep: "Step9", numberStep: "Step 1:", descriptionStep: "Wet face with warm water")
+    ListItem(imageStep: "step2", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
+    ListItem(imageStep: "step2", numberStep: "Step 2:", descriptionStep: "Put cleanser in your fingertip"),
+    ListItem(imageStep: "step3", numberStep: "Step 3:", descriptionStep: "Clean nose area 10 seconds"),
+    ListItem(imageStep: "step4", numberStep: "Step 4:", descriptionStep: "Rub gently in circular motion"),
+    ListItem(imageStep: "step5", numberStep: "Step 5:", descriptionStep: "Clean forehead area 10 seconds"),
+    ListItem(imageStep: "step6", numberStep: "Step 6:", descriptionStep: "Clean cheeks area 20 seconds"),
+    ListItem(imageStep: "step7Updated", numberStep: "Step 7:", descriptionStep: "Clean chin area 10 seconds"),
+    
+    ListItem(imageStep: "step1", numberStep: "Step 8:", descriptionStep: "Rinse face with warm water")
+    
 ]

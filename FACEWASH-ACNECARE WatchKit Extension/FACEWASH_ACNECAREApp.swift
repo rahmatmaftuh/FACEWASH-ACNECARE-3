@@ -12,7 +12,8 @@ struct FACEWASH_ACNECAREApp: App {
     @SceneBuilder var body: some Scene {
         WindowGroup {
             NavigationView {
-                NotificationView()
+//                NotificationView()
+                StartCountdownView()
             }
         }
 
