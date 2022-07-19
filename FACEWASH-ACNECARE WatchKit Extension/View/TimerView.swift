@@ -15,7 +15,7 @@ import UserNotifications
 struct TimerView: View {
     @State private var TimerViewCountdown = 50
     @State private var timerRunning = true
-    @State private var titleTest = "Wash your car"
+    
     @State private var toEndView = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
