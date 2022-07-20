@@ -54,7 +54,7 @@ struct SetReminderView: View {
     
     
     var body: some View {
-        
+        NavigationView{
         ScrollView {
             HStack{
                 Image(systemName: "sun.max")
@@ -64,7 +64,10 @@ struct SetReminderView: View {
             }
             Toggle(isOn: $isMorningPicker) {
 
-                DatePicker("\(selected1.formatted())", selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
+                DatePicker("""
+                \(selected1.formatted(.dateTime.hour().minute()))
+                Change time
+                """, selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
                     Task{
                         let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected1 )
                         let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
@@ -88,7 +91,11 @@ struct SetReminderView: View {
                 Spacer()
             }
             Toggle(isOn: $isEveningPicker){
-                DatePicker("\(selected2.formatted())", selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
+                VStack{
+                DatePicker("""
+\(selected2.formatted(.dateTime.hour().minute()))
+Change time
+""", selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
                     Task{
                         let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected2 )
                         let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
@@ -99,6 +106,8 @@ struct SetReminderView: View {
                         await notifManager.schedule(localNotification: localNotificationMorning)
 
                     }
+                }
+                Text("Change Time")
                 }
             }
             HStack{
@@ -118,7 +127,8 @@ struct SetReminderView: View {
             }
 
 
-        }  .environmentObject(notifManager)
+        }
+        }.environmentObject(notifManager)
             .accentColor(.orange)
             .task{
                 try? await notifManager.requestAuthorization()
