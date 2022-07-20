@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var changeTime = false
+    @State var selectedTag = 1
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+      
+            TabView(selection: $selectedTag){
+              
+                StartCountdownView()
+                    .tag(0)
+           
+              
+                MainSettingView()
+                    .tag(1)
+                
+              
+                GuidelineView()
+                    .tag(2)
+            
+            }.tabViewStyle(PageTabViewStyle())
+        
     }
 }
 
