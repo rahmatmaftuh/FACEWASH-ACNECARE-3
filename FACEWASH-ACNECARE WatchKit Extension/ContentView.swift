@@ -13,19 +13,19 @@ struct ContentView: View {
     var body: some View {
       
             TabView(selection: $selectedTag){
-              
-                StartCountdownView()
+                MainSettingView()
+                
                     .tag(0)
            
               
-                MainSettingView()
+                StartCountdownView()
                     .tag(1)
                 
               
                 GuidelineView()
                     .tag(2)
             
-            }.tabViewStyle(PageTabViewStyle())
+            }
         
     }
 }

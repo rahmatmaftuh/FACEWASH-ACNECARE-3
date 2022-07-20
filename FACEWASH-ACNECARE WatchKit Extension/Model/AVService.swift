@@ -115,7 +115,7 @@ class GuidelineStep3{
     }
 }
 
-class GuidelineStep4{
+class GuidelineStep4 {
    var player : AVAudioPlayer?
    static let shared = GuidelineStep4()
     
