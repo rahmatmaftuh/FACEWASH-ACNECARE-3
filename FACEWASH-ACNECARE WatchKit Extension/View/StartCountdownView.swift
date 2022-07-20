@@ -14,7 +14,9 @@ struct StartCountdownView: View {
     @State private var isPressed : Bool = false
 
     var body: some View {
+        NavigationView{
         if isPressed{
+            
             CountdownView()
             
            
@@ -27,7 +29,7 @@ struct StartCountdownView: View {
                     
                     Text("START")
                         .foregroundColor(Color.black)
-                        .font(.system(size: 19))
+                        .font(.system(size: 34))
                         .bold()
                         .italic()
                      
@@ -43,6 +45,7 @@ struct StartCountdownView: View {
             .navigationBarBackButtonHidden(true)
         }
         
+    }
     }
     
 }
