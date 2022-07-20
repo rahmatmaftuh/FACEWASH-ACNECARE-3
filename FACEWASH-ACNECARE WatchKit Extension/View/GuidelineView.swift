@@ -97,7 +97,7 @@ struct ListItem: Identifiable{
 }
 
 var stepsGuideline = [
-    ListItem(imageStep: "step2", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
+    ListItem(imageStep: "Group 2", numberStep: "Step 1:", descriptionStep: "Wet face with warm water"),
     ListItem(imageStep: "step2", numberStep: "Step 2:", descriptionStep: "Put cleanser in your fingertip"),
     ListItem(imageStep: "step3", numberStep: "Step 3:", descriptionStep: "Clean nose area 10 seconds"),
     ListItem(imageStep: "step4", numberStep: "Step 4:", descriptionStep: "Rub gently in circular motion"),
@@ -105,6 +105,6 @@ var stepsGuideline = [
     ListItem(imageStep: "step6", numberStep: "Step 6:", descriptionStep: "Clean cheeks area 20 seconds"),
     ListItem(imageStep: "step7Updated", numberStep: "Step 7:", descriptionStep: "Clean chin area 10 seconds"),
     
-    ListItem(imageStep: "step1", numberStep: "Step 8:", descriptionStep: "Rinse face with warm water")
+    ListItem(imageStep: "Group 2", numberStep: "Step 8:", descriptionStep: "Rinse face with warm water")
     
 ]
