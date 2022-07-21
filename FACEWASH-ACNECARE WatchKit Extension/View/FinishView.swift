@@ -28,7 +28,7 @@ struct FinishView: View {
             NavigationLink(destination: StartCountdownView()){
                 Text("Done")
             }
-            .navigationBarBackButtonHidden(true)
+//            .navigationBarBackButtonHidden(true)
                 
         }
     }

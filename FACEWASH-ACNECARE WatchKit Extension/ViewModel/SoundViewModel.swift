@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class SoundController: ObservableObject {
+    static let shared = SoundController()
+    
+    @Published var voiceOn: Bool = true
+}
+
+

@@ -24,7 +24,7 @@ struct StartCountdownView: View {
             VStack{
                 ZStack{
                     Circle()
-                        .frame(width: 130, height: 130)
+                        .frame(width: 130, height: 130, alignment: .center)
                         .foregroundColor(Color("startColor"))
                     
                     Text("START")
@@ -37,6 +37,7 @@ struct StartCountdownView: View {
                        
                 
                 }
+                
                 .onTapGesture {
                     isPressed = true
                 }
@@ -44,8 +45,11 @@ struct StartCountdownView: View {
             }
             .navigationBarBackButtonHidden(true)
         }
-        
+            
     }
+        .navigationTitle("Facewash")
+        .navigationBarHidden(true)
+//        .navigationBarBackButtonHidden(true)
     }
     
 }

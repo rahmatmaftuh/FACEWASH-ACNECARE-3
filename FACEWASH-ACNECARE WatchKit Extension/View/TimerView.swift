@@ -23,7 +23,7 @@ struct TimerView: View {
     let path4 = Bundle.main.path(forResource: "step4ChinCheek", ofType: "mp3") ?? ""
     let path5 = Bundle.main.path(forResource: "finish", ofType: "mp3") ?? ""
     
-    
+    @ObservedObject var voiceController = SoundController.shared
     
     
     func play(_ type: WKHapticType){
@@ -52,8 +52,12 @@ struct TimerView: View {
                             //49
                             if timerCountDown == 39 {
                                 play(WKHapticType.notification)
-                                let url1 = URL(fileURLWithPath: path1)
-                                GuidelineSounds.shared.playMusic(sound: url1)
+                                
+                                if voiceController.voiceOn {
+                                    let url1 = URL(fileURLWithPath: path1)
+                                    GuidelineSounds.shared.playMusic(sound: url1)
+                                }
+                                
                                 
                                 //Resource: https://makeapppie.com/2016/08/29/make-a-watch-os-haptic-catalog-with-a-picker/
                             }
@@ -71,8 +75,12 @@ struct TimerView: View {
                             //39
                             if timerCountDown == 29 {
                                 play(WKHapticType.notification)
-                                let url2 = URL(fileURLWithPath: path2)
-                                GuidelineSounds.shared.playMusic(sound: url2)
+                                
+                                
+                                if voiceController.voiceOn {
+                                    let url2 = URL(fileURLWithPath: path2)
+                                    GuidelineSounds.shared.playMusic(sound: url2)
+                                }
                             }
                             
                         }
@@ -90,8 +98,12 @@ struct TimerView: View {
                             if timerCountDown == 19{
                                 
                                 play(WKHapticType.notification)
-                                let url3 = URL(fileURLWithPath: path3)
-                                GuidelineSounds.shared.playMusic(sound: url3)
+                                
+                                if voiceController.voiceOn {
+                                    let url3 = URL(fileURLWithPath: path3)
+                                    GuidelineSounds.shared.playMusic(sound: url3)
+                                }
+                                
                             }
                          
                             
@@ -109,17 +121,24 @@ struct TimerView: View {
                             
                             if timerCountDown == 9 {
                                 play(WKHapticType.notification)
-                                let url4 = URL(fileURLWithPath: path4)
-                                GuidelineSounds.shared.playMusic(sound: url4)
+                                
+                                if voiceController.voiceOn {
+                                    let url4 = URL(fileURLWithPath: path4)
+                                    GuidelineSounds.shared.playMusic(sound: url4)
+                                }
+                                
                             }
                             else if timerCountDown == 1 {
+                                
                                 let url5 = URL(fileURLWithPath: path5)
                                 GuidelineSounds.shared.playMusic(sound: url5)
+                                
                             }
                             
                         }
                     
                 }
+                
                 Text("\(timerCountDown)")
                     .onReceive(timer) { _ in
                         if timerCountDown > 0 && timerRunning{

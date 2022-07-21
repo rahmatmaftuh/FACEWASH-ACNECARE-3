@@ -33,10 +33,11 @@ struct GuidelineView: View {
 //
 //                ){
             List{
-                Section(header: Text("Facewash")
+                Section(header: Text("FACEWASH")
                     .font(.system(size: 16))
                     .fontWeight(.semibold)
-                    .foregroundColor(Color("startColor"))){
+                    .foregroundColor(Color("startColor"))
+                ){
                     Image("introFacewash")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -79,6 +80,8 @@ struct GuidelineView: View {
             
 
         }
+        .navigationTitle("Guideline")
+        
     }
 }
 
@@ -102,8 +105,8 @@ var stepsGuideline = [
     ListItem(imageStep: "step3", numberStep: "Step 3:", descriptionStep: "Clean nose area 10 seconds"),
     ListItem(imageStep: "step4", numberStep: "Step 4:", descriptionStep: "Rub gently in circular motion"),
     ListItem(imageStep: "step5", numberStep: "Step 5:", descriptionStep: "Clean forehead area 10 seconds"),
-    ListItem(imageStep: "step6", numberStep: "Step 6:", descriptionStep: "Clean cheeks area 20 seconds"),
-    ListItem(imageStep: "step7Updated", numberStep: "Step 7:", descriptionStep: "Clean chin area 10 seconds"),
+    ListItem(imageStep: "step6", numberStep: "Step 6:", descriptionStep: "Clean cheeks area 10 seconds"),
+    ListItem(imageStep: "step7Updated", numberStep: "Step 7:", descriptionStep: "Clean chin and neck area 10 seconds"),
     
     ListItem(imageStep: "Group 2", numberStep: "Step 8:", descriptionStep: "Rinse face with warm water")
     
