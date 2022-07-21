@@ -15,7 +15,6 @@ struct FACEWASH_ACNECAREApp: App {
                 ContentView()
             }
         }
-
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

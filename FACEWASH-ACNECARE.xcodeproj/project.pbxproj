@@ -21,9 +21,6 @@
 		9AF61EBF2885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */; };
 		9AF61EC02885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */; };
 		9AF61EC12885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */; };
-		9AF61EC32885BE1000A9FDE2 /* step4Chin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EC22885BE1000A9FDE2 /* step4Chin.mp3 */; };
-		9AF61EC42885BE1000A9FDE2 /* step4Chin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EC22885BE1000A9FDE2 /* step4Chin.mp3 */; };
-		9AF61EC52885BE1000A9FDE2 /* step4Chin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EC22885BE1000A9FDE2 /* step4Chin.mp3 */; };
 		9B470E7F2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E832881157C00E48FD8 /* Assets.xcassets */; };
 		9B470E8A2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -40,13 +37,16 @@
 		9B470EB9288116FF00E48FD8 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EB8288116FF00E48FD8 /* NotificationManager.swift */; };
 		9B470EBF288118C300E48FD8 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EBE288118C300E48FD8 /* LocationModel.swift */; };
 		9B470EC32881192100E48FD8 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EC22881192100E48FD8 /* TimerModel.swift */; };
-		9B470ECD28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
-		9B470ECE28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
-		9B470ECF28811DC000E48FD8 /* siri.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B470ECC28811DC000E48FD8 /* siri.mp3 */; };
 		9B470ED528811E0E00E48FD8 /* SoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */; };
 		9B470EDE2881A95E00E48FD8 /* WatchDatePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9B470EDD2881A95E00E48FD8 /* WatchDatePicker */; };
 		9B470EE02883A04000E48FD8 /* GuidelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EDF2883A04000E48FD8 /* GuidelineView.swift */; };
 		9B470EE22883A22100E48FD8 /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EE12883A22100E48FD8 /* SetReminderView.swift */; };
+		9B7FB6BB288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */; };
+		9B7FB6BC288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */; };
+		9B7FB6BD288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */; };
+		9B7FB6BF288912DE00A6A6FA /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BE288912DE00A6A6FA /* finish.mp3 */; };
+		9B7FB6C0288912DE00A6A6FA /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BE288912DE00A6A6FA /* finish.mp3 */; };
+		9B7FB6C1288912DE00A6A6FA /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BE288912DE00A6A6FA /* finish.mp3 */; };
 		9BAA04A2288530DB005E07D0 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA04A1288530DB005E07D0 /* FinishView.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,7 +99,6 @@
 		9AF61EB62885BDC300A9FDE2 /* step1Nose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step1Nose.mp3; sourceTree = "<group>"; };
 		9AF61EBA2885BE0300A9FDE2 /* step2Forehead.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step2Forehead.mp3; sourceTree = "<group>"; };
 		9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step3Cheek.mp3; sourceTree = "<group>"; };
-		9AF61EC22885BE1000A9FDE2 /* step4Chin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step4Chin.mp3; sourceTree = "<group>"; };
 		9B470E7A2881157B00E48FD8 /* FACEWASH-ACNECARE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACEWASH-ACNECARE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B470E7E2881157B00E48FD8 /* FACEWASH-ACNECARE WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACEWASH-ACNECARE WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B470E832881157C00E48FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,10 +118,11 @@
 		9B470EB8288116FF00E48FD8 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		9B470EBE288118C300E48FD8 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		9B470EC22881192100E48FD8 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
-		9B470ECC28811DC000E48FD8 /* siri.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = siri.mp3; sourceTree = "<group>"; };
 		9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		9B470EDF2883A04000E48FD8 /* GuidelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelineView.swift; sourceTree = "<group>"; };
 		9B470EE12883A22100E48FD8 /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
+		9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step4ChinCheek.mp3; sourceTree = "<group>"; };
+		9B7FB6BE288912DE00A6A6FA /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = "<group>"; };
 		9BAA04A1288530DB005E07D0 /* FinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,11 +230,11 @@
 		9B470EAF2881166A00E48FD8 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				9B7FB6BE288912DE00A6A6FA /* finish.mp3 */,
 				9AF61EB62885BDC300A9FDE2 /* step1Nose.mp3 */,
 				9AF61EBA2885BE0300A9FDE2 /* step2Forehead.mp3 */,
 				9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */,
-				9AF61EC22885BE1000A9FDE2 /* step4Chin.mp3 */,
-				9B470ECC28811DC000E48FD8 /* siri.mp3 */,
+				9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */,
 				9AF5B41A2884817C00FF63F2 /* beepCountdown.mp3 */,
 			);
 			path = Asset;
@@ -356,11 +356,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7FB6BF288912DE00A6A6FA /* finish.mp3 in Resources */,
 				9AF61EB72885BDC300A9FDE2 /* step1Nose.mp3 in Resources */,
-				9AF61EC32885BE1000A9FDE2 /* step4Chin.mp3 in Resources */,
 				9AF61EBB2885BE0300A9FDE2 /* step2Forehead.mp3 in Resources */,
+				9B7FB6BB288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */,
 				9AF5B41B2884817C00FF63F2 /* beepCountdown.mp3 in Resources */,
-				9B470ECD28811DC000E48FD8 /* siri.mp3 in Resources */,
 				9AF61EBF2885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,9 +370,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */,
-				9AF61EC42885BE1000A9FDE2 /* step4Chin.mp3 in Resources */,
+				9B7FB6C0288912DE00A6A6FA /* finish.mp3 in Resources */,
+				9B7FB6BC288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */,
 				9AF61EBC2885BE0300A9FDE2 /* step2Forehead.mp3 in Resources */,
-				9B470ECE28811DC000E48FD8 /* siri.mp3 in Resources */,
 				9AF61EC02885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */,
 				9AF5B41C2884817C00FF63F2 /* beepCountdown.mp3 in Resources */,
 				9AF61EB82885BDC400A9FDE2 /* step1Nose.mp3 in Resources */,
@@ -389,8 +389,8 @@
 				9B470E9C2881157E00E48FD8 /* Preview Assets.xcassets in Resources */,
 				9AF61EC12885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */,
 				9B470E992881157E00E48FD8 /* Assets.xcassets in Resources */,
-				9B470ECF28811DC000E48FD8 /* siri.mp3 in Resources */,
-				9AF61EC52885BE1000A9FDE2 /* step4Chin.mp3 in Resources */,
+				9B7FB6BD288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */,
+				9B7FB6C1288912DE00A6A6FA /* finish.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
