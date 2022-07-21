@@ -21,7 +21,7 @@
 		9AF61EBF2885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */; };
 		9AF61EC02885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */; };
 		9AF61EC12885BE0A00A9FDE2 /* step3Cheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */; };
-		9B470E7F2881157B00E48FD8 /* Facewash .app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B470E7E2881157B00E48FD8 /* Facewash .app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B470E7F2881157B00E48FD8 /* Facewash.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B470E7E2881157B00E48FD8 /* Facewash.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9B470E842881157C00E48FD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B470E832881157C00E48FD8 /* Assets.xcassets */; };
 		9B470E8A2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9B470E8F2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */; };
@@ -85,7 +85,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				9B470E7F2881157B00E48FD8 /* Facewash .app in Embed Watch Content */,
+				9B470E7F2881157B00E48FD8 /* Facewash.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,7 +100,7 @@
 		9AF61EBA2885BE0300A9FDE2 /* step2Forehead.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step2Forehead.mp3; sourceTree = "<group>"; };
 		9AF61EBE2885BE0A00A9FDE2 /* step3Cheek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step3Cheek.mp3; sourceTree = "<group>"; };
 		9B470E7A2881157B00E48FD8 /* Facewash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facewash.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B470E7E2881157B00E48FD8 /* Facewash .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facewash .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B470E7E2881157B00E48FD8 /* Facewash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facewash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B470E832881157C00E48FD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FACEWASH-ACNECARE WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B470E8E2881157D00E48FD8 /* FACEWASH_ACNECAREApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FACEWASH_ACNECAREApp.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				9B470E7A2881157B00E48FD8 /* Facewash.app */,
-				9B470E7E2881157B00E48FD8 /* Facewash .app */,
+				9B470E7E2881157B00E48FD8 /* Facewash.app */,
 				9B470E892881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension.appex */,
 			);
 			name = Products;
@@ -284,7 +284,7 @@
 			);
 			name = "FACEWASH-ACNECARE WatchKit App";
 			productName = "FACEWASH-ACNECARE WatchKit App";
-			productReference = 9B470E7E2881157B00E48FD8 /* Facewash .app */;
+			productReference = 9B470E7E2881157B00E48FD8 /* Facewash.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
 		9B470E882881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */ = {
@@ -554,7 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FACEWASH-ACNECARE WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				ENABLE_PREVIEWS = YES;
@@ -577,7 +577,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -586,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FACEWASH-ACNECARE WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				ENABLE_PREVIEWS = YES;
@@ -609,7 +609,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -621,20 +621,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = FACEWASH_ACNECARE_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE.watchkitapp";
-				PRODUCT_NAME = "Facewash ";
+				PRODUCT_NAME = Facewash;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -646,20 +646,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = FACEWASH_ACNECARE_WatchKit_Extension;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE.watchkitapp";
-				PRODUCT_NAME = "Facewash ";
+				PRODUCT_NAME = Facewash;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -667,7 +667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE";
@@ -680,7 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.FACEWASH-ACNECARE";

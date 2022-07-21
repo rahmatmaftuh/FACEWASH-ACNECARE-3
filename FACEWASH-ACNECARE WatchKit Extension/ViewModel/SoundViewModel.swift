@@ -13,4 +13,17 @@ class SoundController: ObservableObject {
     @Published var voiceOn: Bool = true
 }
 
+class MorningNotifController: ObservableObject {
+    static let shared = MorningNotifController()
+    
+    @Published var morningOn: Bool = true
+    
+}
+class EveningNotifController: ObservableObject {
+    
+    static let shared = EveningNotifController()
+    
+    @Published var eveningOn: Bool = true
+    
+}
 
