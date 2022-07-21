@@ -11,11 +11,15 @@ import WatchDatePicker
 
 struct MainSettingView : View {
     @State var changeTime = false
-    @State var voiceOver = false
+//    @State var voiceOver = false
     @StateObject var notifManager = LocalNotificationManager()
     @State var selected = Date()
     
+    @ObservedObject var soundController = SoundController.shared
+   
+    
     var body: some View {
+        
         NavigationView{
             VStack{
                 ZStack{
@@ -34,16 +38,16 @@ struct MainSettingView : View {
                     
                 }
                 Button(action: {
-                    if voiceOver{
-                        
-                        
-                        
-                    }else {
+//                    if voiceOver{
 //
-                        GuidelineSounds.shared.player?.stop()
-                    }
+//
+//
+//                    }else {
+////
+//                        GuidelineSounds.shared.player?.stop()
+//                    }
                 }, label: {
-                    Toggle("Voice Over", isOn: $voiceOver)
+                    Toggle("Voice Over", isOn: $soundController.voiceOn)
                 })
                 Spacer()
                 
@@ -81,12 +85,16 @@ struct SetReminderView: View {
                 }, label: {
                     
                     Toggle(isOn: $isMorningPicker) {
-                        
-                        DatePicker("""
-                    \(selected1.formatted(.dateTime.hour().minute()))
-                    Change time
-                    """, selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
-                            
+
+                        DatePicker(
+//                    """
+//                    \(selected1.formatted(.dateTime.hour().minute()))
+//                    Change time
+//                    """
+                            "Change time"
+                    ,
+                    selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true) { Date in
+
                             if isMorningPicker {
                                 Task{
                                     let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected1 )
@@ -95,14 +103,20 @@ struct SetReminderView: View {
                                                                                         body: "It's morning already",
                                                                                         dateComponents: dateComponents,
                                                                                         repeats: true)
-                                    
+
                                     await notifManager.schedule(localNotification: localNotificationMorning)
-                                    
+
                                 }
                             }
                         }
-                        
+
+
+
                     }
+                    .buttonStyle(.borderless)
+                    
+                    
+                   
                     
                 })
                
@@ -114,13 +128,10 @@ struct SetReminderView: View {
                     Spacer()
                 }
                 Button(action: {
-                    
+
                 }, label: {
                     Toggle(isOn: $isEveningPicker){
-                        DatePicker("""
-    \(selected2.formatted(.dateTime.hour().minute()))
-    Change time
-    """, selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
+                        DatePicker("Change time", selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
                             if isEveningPicker{
                                 Task {
                                     let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected2 )
@@ -139,6 +150,7 @@ struct SetReminderView: View {
                         }
                         
                     }
+                    .buttonStyle(.borderless)
                 })
                 HStack{
                     Image(systemName: "location")
@@ -152,8 +164,10 @@ struct SetReminderView: View {
                     Toggle(isOn: $isMorningPicker){
                         VStack(alignment: .leading){
                             Text("Home")
-                                .fontWeight(.semibold)
+                                .foregroundColor(Color("startColor"))
+                                
                             Text("When return")
+                                .foregroundColor(Color("startColor"))
                                 .font(.system(size: 15))
                                 .opacity(0.5)
                         }
@@ -163,7 +177,7 @@ struct SetReminderView: View {
                 
                 
             }.environmentObject(notifManager)
-                .accentColor(.orange)
+                .accentColor(Color("startColor"))
                 .task{
                     try? await notifManager.requestAuthorization()
                 }
@@ -185,5 +199,3 @@ struct SetReminderView_Previews: PreviewProvider {
         SetReminderView()
     }
 }
-
-
