@@ -152,27 +152,27 @@ struct SetReminderView: View {
                     }
                     .buttonStyle(.borderless)
                 })
-                HStack{
-                    Image(systemName: "location")
-                    Text("Location")
-                    Spacer()
-                    
-                }
-                Button(action: {
-                    
-                }, label: {
-                    Toggle(isOn: $isMorningPicker){
-                        VStack(alignment: .leading){
-                            Text("Home")
-                                .foregroundColor(Color("startColor"))
-                                
-                            Text("When return")
-                                .foregroundColor(Color("startColor"))
-                                .font(.system(size: 15))
-                                .opacity(0.5)
-                        }
-                    }
-                })
+//                HStack{
+//                    Image(systemName: "location")
+//                    Text("Location")
+//                    Spacer()
+//                    
+//                }
+//                Button(action: {
+//                    
+//                }, label: {
+//                    Toggle(isOn: $isMorningPicker){
+//                        VStack(alignment: .leading){
+//                            Text("Home")
+//                                .foregroundColor(Color("startColor"))
+//                                
+//                            Text("When return")
+//                                .foregroundColor(Color("startColor"))
+//                                .font(.system(size: 15))
+//                                .opacity(0.5)
+//                        }
+//                    }
+//                })
                 
                 
                 
