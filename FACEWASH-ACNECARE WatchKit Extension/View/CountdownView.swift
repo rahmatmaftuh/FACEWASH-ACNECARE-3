@@ -29,13 +29,14 @@ struct CountdownView: View {
                 Circle()
                     .stroke(Color("startColor").opacity(0.5), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                     .frame(width: 130, height: 130)
-                Circle()
-                    .trim(from:0, to:1 - ((defaultTimeRemaining-TimeRemaining)/defaultTimeRemaining))
-                    .stroke( Color("startColor"),
-                        style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
-                    .rotationEffect(.degrees(-90))
-                    .animation(.easeInOut)
-                    .frame(width: 130, height: 130)
+                withAnimation(.easeInOut) {
+                    Circle()
+                        .trim(from:0, to:1 - ((defaultTimeRemaining-TimeRemaining)/defaultTimeRemaining))
+                        .stroke( Color("startColor"),
+                            style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
+                        .rotationEffect(.degrees(-90))
+                        .frame(width: 130, height: 130)
+                }
                 
                 Text("\(Int(TimeRemaining))")               .foregroundColor(Color("startColor"))
                     .font(.largeTitle)

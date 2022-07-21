@@ -62,14 +62,15 @@ struct MainSettingView : View {
 
 
 struct SetReminderView: View {
-    @State private var isMorningPicker = false
-    @State private var isEveningPicker = false
+//    @State private var isMorningPicker = false
+//    @State private var isEveningPicker = false
     @State private var isLocation = false
     @EnvironmentObject var notifManager : LocalNotificationManager
     @State var selected1 = Date()
     @State var selected2 = Date()
     @Environment(\.scenePhase) var scenePhase
-    
+    @ObservedObject var morningController = MorningNotifController.shared
+    @ObservedObject var eveningController = EveningNotifController.shared
     
     var body: some View {
         NavigationView{
@@ -84,7 +85,7 @@ struct SetReminderView: View {
                     
                 }, label: {
                     
-                    Toggle(isOn: $isMorningPicker) {
+                    Toggle(isOn: $morningController.morningOn) {
 
                         DatePicker(
 //                    """
@@ -95,7 +96,7 @@ struct SetReminderView: View {
                     ,
                     selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true) { Date in
 
-                            if isMorningPicker {
+                        if morningController.morningOn {
                                 Task{
                                     let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected1 )
                                     let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
@@ -130,9 +131,9 @@ struct SetReminderView: View {
                 Button(action: {
 
                 }, label: {
-                    Toggle(isOn: $isEveningPicker){
+                    Toggle(isOn: $eveningController.eveningOn){
                         DatePicker("Change time", selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
-                            if isEveningPicker{
+                            if eveningController.eveningOn{
                                 Task {
                                     let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected2 )
                                     let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
@@ -156,10 +157,10 @@ struct SetReminderView: View {
 //                    Image(systemName: "location")
 //                    Text("Location")
 //                    Spacer()
-//                    
+//
 //                }
 //                Button(action: {
-//                    
+//
 //                }, label: {
 //                    Toggle(isOn: $isMorningPicker){
 //                        VStack(alignment: .leading){
