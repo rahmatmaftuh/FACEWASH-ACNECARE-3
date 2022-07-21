@@ -14,36 +14,33 @@ struct MainSettingView : View {
     @State var voiceOver = false
     @StateObject var notifManager = LocalNotificationManager()
     @State var selected = Date()
-    //   @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         NavigationView{
-            VStack(alignment: .leading){
+            VStack{
                 ZStack{
-                NavigationLink("", destination: SetReminderView().environmentObject(notifManager), isActive: $changeTime)
-                    .opacity(0)
-                
-                 HStack{
-                        Button(action: {
-                            changeTime = true
-                        }, label: {
-                            Text("Set Reminder")
-                            
-                        })
-                     Spacer()
-                    }
+                    NavigationLink("", destination: SetReminderView().environmentObject(notifManager), isActive: $changeTime)
+                        .opacity(0)
+                    
+                    
+                    Button(action: {
+                        changeTime = true
+                    }, label: {
+                        
+                        Text("Set Reminder")
+                            .padding(.trailing, 60)
+                        
+                    })
+                    
                 }
-                
                 Button(action: {
                     if voiceOver{
                         
                         
                         
                     }else {
-                        GuidelineStep1.shared.player?.stop()
-                        GuidelineStep2.shared.player?.stop()
-                        GuidelineStep3.shared.player?.stop()
-                        GuidelineStep4.shared.player?.stop()
+//
+                        GuidelineSounds.shared.player?.stop()
                     }
                 }, label: {
                     Toggle("Voice Over", isOn: $voiceOver)
@@ -79,32 +76,36 @@ struct SetReminderView: View {
                     Spacer()
                     
                 }
-                Toggle(isOn: $isMorningPicker) {
+                Button(action: {
                     
-                    DatePicker("""
-                \(selected1.formatted(.dateTime.hour().minute()))
-                Change time
-                """, selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
+                }, label: {
+                    
+                    Toggle(isOn: $isMorningPicker) {
                         
-                        if isMorningPicker {
-                            Task{
-                                let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected1 )
-                                let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
-                                                                                    title: "Wash your face",
-                                                                                    body: "It's morning already",
-                                                                                    dateComponents: dateComponents,
-                                                                                    repeats: true)
-                                
-                                await notifManager.schedule(localNotification: localNotificationMorning)
-                                
+                        DatePicker("""
+                    \(selected1.formatted(.dateTime.hour().minute()))
+                    Change time
+                    """, selection: $selected1, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
+                            
+                            if isMorningPicker {
+                                Task{
+                                    let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected1 )
+                                    let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
+                                                                                        title: "Wash your face",
+                                                                                        body: "It's morning already",
+                                                                                        dateComponents: dateComponents,
+                                                                                        repeats: true)
+                                    
+                                    await notifManager.schedule(localNotification: localNotificationMorning)
+                                    
+                                }
                             }
                         }
+                        
                     }
                     
-                    //                    if isMorningPicker {
-                    //
-                    //                    }
-                }
+                })
+               
                 
                 
                 HStack{
@@ -112,44 +113,52 @@ struct SetReminderView: View {
                     Text("Evening")
                     Spacer()
                 }
-                Toggle(isOn: $isEveningPicker){
-                    DatePicker("""
-\(selected2.formatted(.dateTime.hour().minute()))
-Change time
-""", selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
-                        if isEveningPicker{
-                            Task {
-                                let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected2 )
-                                let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
-                                                                                    title: "Wash your face",
-                                                                                    body: "It's morning already",
-                                                                                    dateComponents: dateComponents,
-                                                                                    repeats: true)
-                                await notifManager.schedule(localNotification: localNotificationMorning)
+                Button(action: {
+                    
+                }, label: {
+                    Toggle(isOn: $isEveningPicker){
+                        DatePicker("""
+    \(selected2.formatted(.dateTime.hour().minute()))
+    Change time
+    """, selection: $selected2, mode: .time, minimumDate: .now, maximumDate: nil, showsMonthBeforeDay: false, twentyFourHour: true){ Date in
+                            if isEveningPicker{
+                                Task {
+                                    let dateComponents = Calendar.current.dateComponents([.hour, .minute], from: selected2 )
+                                    let localNotificationMorning = LocalNotificationVar(identifier: UUID().uuidString,
+                                                                                        title: "Wash your face",
+                                                                                        body: "It's morning already",
+                                                                                        dateComponents: dateComponents,
+                                                                                        repeats: true)
+                                    await notifManager.schedule(localNotification: localNotificationMorning)
+                                    
+                                }
                                 
                             }
                             
+                            
                         }
                         
-                        
                     }
-                    
-                }
+                })
                 HStack{
                     Image(systemName: "location")
                     Text("Location")
                     Spacer()
                     
                 }
-                Toggle(isOn: $isMorningPicker){
-                    VStack(alignment: .leading){
-                        Text("Home")
-                            .fontWeight(.semibold)
-                        Text("When return")
-                            .font(.system(size: 15))
-                            .opacity(0.5)
+                Button(action: {
+                    
+                }, label: {
+                    Toggle(isOn: $isMorningPicker){
+                        VStack(alignment: .leading){
+                            Text("Home")
+                                .fontWeight(.semibold)
+                            Text("When return")
+                                .font(.system(size: 15))
+                                .opacity(0.5)
+                        }
                     }
-                }
+                })
                 
                 
                 

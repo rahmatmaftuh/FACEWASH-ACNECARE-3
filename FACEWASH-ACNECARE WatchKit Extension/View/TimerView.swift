@@ -10,17 +10,22 @@
 
 import SwiftUI
 import UserNotifications
-//import WatchKit
-
 
 struct TimerView: View {
-    @State private var TimerViewCountdown = 50
+    @State private var timerCountDown = 40
     @State private var timerRunning = true
-    
     @State private var toEndView = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-
+    let path1 = Bundle.main.path(forResource: "step1Nose", ofType:"mp3") ?? ""
+    let path2 = Bundle.main.path(forResource: "step2Forehead", ofType: "mp3") ?? ""
+    let path3 = Bundle.main.path(forResource: "step3Cheek", ofType: "mp3") ?? ""
+    let path4 = Bundle.main.path(forResource: "step4ChinCheek", ofType: "mp3") ?? ""
+    let path5 = Bundle.main.path(forResource: "finish", ofType: "mp3") ?? ""
+    
+    
+    
+    
     func play(_ type: WKHapticType){
         WKInterfaceDevice.current().play(type)
         
@@ -37,20 +42,18 @@ struct TimerView: View {
             VStack{
                 
                 
-                if TimerViewCountdown > 40 && timerRunning {
-                    //AVService.shared.playMusic()
+                if timerCountDown > 30 && timerRunning {
                     Text("Clean nose area for 10 seconds")
                         .foregroundColor(Color("titleGuidelineColor"))
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .onReceive(timer) { _ in
-                            
-                            if TimerViewCountdown == 50{
+                            //49
+                            if timerCountDown == 39 {
                                 play(WKHapticType.notification)
-                                GuidelineStep1.shared.playMusic()
-                                
-                                //HAPTIC DI WATCHOS GAPAKE UIIMPACT DSB, TAPI PAKENYA WKHAPTICTYPE
+                                let url1 = URL(fileURLWithPath: path1)
+                                GuidelineSounds.shared.playMusic(sound: url1)
                                 
                                 //Resource: https://makeapppie.com/2016/08/29/make-a-watch-os-haptic-catalog-with-a-picker/
                             }
@@ -58,18 +61,18 @@ struct TimerView: View {
                         }
                     
                     Spacer()
-                    
-                } else if TimerViewCountdown > 30 && timerRunning {
+                } else if timerCountDown > 20 && timerRunning {
                     Text("Clean forehead area for 10 seconds")
                         .foregroundColor(Color("titleGuidelineColor"))
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .onReceive(timer) { _ in
-                            
-                            if TimerViewCountdown == 40{
+                            //39
+                            if timerCountDown == 29 {
                                 play(WKHapticType.notification)
-                                GuidelineStep2.shared.playMusic()
+                                let url2 = URL(fileURLWithPath: path2)
+                                GuidelineSounds.shared.playMusic(sound: url2)
                             }
                             
                         }
@@ -77,20 +80,20 @@ struct TimerView: View {
                     
                     Spacer()
                     
-                }else if TimerViewCountdown > 10 && timerRunning {
-                    Text("Clean cheeks area for 20 seconds")
+                }else if timerCountDown > 10 && timerRunning {
+                    Text("Clean cheeks area for 10 seconds")
                         .foregroundColor(Color("titleGuidelineColor"))
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .onReceive(timer) { _ in
-                            
-                            if TimerViewCountdown == 30{
+                            if timerCountDown == 19{
                                 
-                                //                            GuidelineStep3.shared.playMusic()
                                 play(WKHapticType.notification)
-                                GuidelineStep3.shared.playMusic()
+                                let url3 = URL(fileURLWithPath: path3)
+                                GuidelineSounds.shared.playMusic(sound: url3)
                             }
+                         
                             
                         }
                     Spacer()
@@ -104,20 +107,23 @@ struct TimerView: View {
                     Spacer()
                         .onReceive(timer) { _ in
                             
-                            if TimerViewCountdown == 10{
+                            if timerCountDown == 9 {
                                 play(WKHapticType.notification)
-                                GuidelineStep4.shared.playMusic()
-                                
+                                let url4 = URL(fileURLWithPath: path4)
+                                GuidelineSounds.shared.playMusic(sound: url4)
+                            }
+                            else if timerCountDown == 1 {
+                                let url5 = URL(fileURLWithPath: path5)
+                                GuidelineSounds.shared.playMusic(sound: url5)
                             }
                             
                         }
                     
                 }
-                Text("\(TimerViewCountdown)")
+                Text("\(timerCountDown)")
                     .onReceive(timer) { _ in
-                        if TimerViewCountdown > 0 && timerRunning{
-                            TimerViewCountdown -= 1
-                            //                        AVService.shared.playMusic()
+                        if timerCountDown > 0 && timerRunning{
+                            timerCountDown -= 1
                         }
                         else{
                             timerRunning = false
