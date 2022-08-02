@@ -41,6 +41,7 @@
 		9B470EDE2881A95E00E48FD8 /* WatchDatePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9B470EDD2881A95E00E48FD8 /* WatchDatePicker */; };
 		9B470EE02883A04000E48FD8 /* GuidelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EDF2883A04000E48FD8 /* GuidelineView.swift */; };
 		9B470EE22883A22100E48FD8 /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B470EE12883A22100E48FD8 /* SetReminderView.swift */; };
+		9B5B88F3289959AD007302BF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5B88F2289959AD007302BF /* HealthKit.framework */; };
 		9B7FB6BB288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */; };
 		9B7FB6BC288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */; };
 		9B7FB6BD288912CD00A6A6FA /* step4ChinCheek.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */; };
@@ -121,6 +122,8 @@
 		9B470ED428811E0E00E48FD8 /* SoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewModel.swift; sourceTree = "<group>"; };
 		9B470EDF2883A04000E48FD8 /* GuidelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelineView.swift; sourceTree = "<group>"; };
 		9B470EE12883A22100E48FD8 /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
+		9B5B88F1289959AD007302BF /* FACEWASH-ACNECARE WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FACEWASH-ACNECARE WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		9B5B88F2289959AD007302BF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B7FB6BA288912CD00A6A6FA /* step4ChinCheek.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = step4ChinCheek.mp3; sourceTree = "<group>"; };
 		9B7FB6BE288912DE00A6A6FA /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = "<group>"; };
 		9BAA04A1288530DB005E07D0 /* FinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B470EDE2881A95E00E48FD8 /* WatchDatePicker in Frameworks */,
+				9B5B88F3289959AD007302BF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +173,7 @@
 		9B470E8D2881157D00E48FD8 /* FACEWASH-ACNECARE WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9B5B88F1289959AD007302BF /* FACEWASH-ACNECARE WatchKit Extension.entitlements */,
 				9B470EAF2881166A00E48FD8 /* Asset */,
 				9B470EAE2881165F00E48FD8 /* ViewModel */,
 				9B470EAD2881164B00E48FD8 /* Model */,
@@ -243,6 +248,7 @@
 		9B470EDC2881A95E00E48FD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B5B88F2289959AD007302BF /* HealthKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -553,6 +559,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FACEWASH-ACNECARE WatchKit Extension/FACEWASH-ACNECARE WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FACEWASH-ACNECARE WatchKit Extension/Preview Content\"";
@@ -585,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "FACEWASH-ACNECARE WatchKit Extension/FACEWASH-ACNECARE WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FACEWASH-ACNECARE WatchKit Extension/Preview Content\"";

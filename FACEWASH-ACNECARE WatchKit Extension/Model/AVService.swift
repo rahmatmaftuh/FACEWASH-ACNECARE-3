@@ -7,15 +7,26 @@
 
 import Foundation
 import AVFoundation
-
+//import AVFAudio
 
 //MARK: BEEP COUNTDOWN
 
-class AVServiceCountdown{
+class AVServiceCountdown {
    var player : AVAudioPlayer?
+    let session = AVAudioSession.sharedInstance()
    static let shared = AVServiceCountdown()
-    
+
     func playMusic(){
+        do {
+            try session.setCategory(AVAudioSession.Category.playback,
+                                    mode: .default,
+                                    policy: .default,
+            options: [])
+        } catch {
+            print("error loading session")
+        }
+        
+        
         //akses alamat
         let path = Bundle.main.path(forResource: "beepCountdown", ofType:"mp3") ?? ""
         
@@ -27,10 +38,21 @@ class AVServiceCountdown{
             player = try AVAudioPlayer(contentsOf: url)
             
             //player di mainkan
-            player?.play()
+//            player?.play()
         } catch {
             print("couldn't load countdown")
             // couldn't load file :(
+        }
+        
+        session.activate(options: []) { (succes, error) in
+            guard error == nil else {
+                print(error!)
+                return
+                
+            }
+            
+            self.player?.play()
+            
         }
     }
 }
@@ -39,15 +61,47 @@ class AVServiceCountdown{
 class GuidelineSounds{
    var player : AVAudioPlayer?
    static let shared = GuidelineSounds()
+    let session = AVAudioSession.sharedInstance()
+
     
+//
+//    func prepareSession() {
+//        do {
+//            try session.setCategory(AVAudioSession.Category.playback,
+//                                    mode: .default,
+//                                    policy: .longFormAudio,
+//            options: [])
+//        } catch {
+//            print("error loading session")
+//        }
+//    }
+//
     func playMusic(sound: URL){
-       
+        do {
+            try session.setCategory(AVAudioSession.Category.playback,
+                                    mode: .default,
+                                    policy: .default,
+            options: [])
+        } catch {
+            print("error loading session")
+        }
         do {
             player = try AVAudioPlayer(contentsOf: sound)
             
-            player?.play()
+//            player?.play()
         } catch {
             print("couldn't play guideline")
         }
+        
+        session.activate(options: []) { (succes, error) in
+            guard error == nil else {
+                print(error!)
+                return
+                
+            }
+            self.player?.play()
+            
+        }
     }
 }
+
